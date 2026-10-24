@@ -1,4 +1,3 @@
-const GOOGLE_SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbySUNrLeNOPExEpP19Z9Y1FSktXo_7EZZz94994ftnCYicx7he2py6Uzp7uLTKYshSW/exec";
 const EMAIL_ENDPOINT = "https://formsubmit.co/ajax/hello@startupdost.online";
 
 const form = document.querySelector("#contact-form");
@@ -41,16 +40,6 @@ form?.addEventListener("submit", async event => {
 
     if (!response.ok || result.success !== "true" && result.success !== true) {
       throw new Error(result.message || "Email delivery was not confirmed.");
-    }
-
-    // Keep the existing spreadsheet logging as a secondary copy.
-    if (GOOGLE_SHEETS_ENDPOINT) {
-      fetch(GOOGLE_SHEETS_ENDPOINT, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-        body: new URLSearchParams(data).toString()
-      }).catch(() => {});
     }
 
     const thankYou = document.createElement("div");
