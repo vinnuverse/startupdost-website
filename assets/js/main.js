@@ -16,6 +16,72 @@ nav?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => 
   menuToggle?.setAttribute("aria-expanded", "false");
 }));
 
+// Progressive reveal: content remains visible if IntersectionObserver is unavailable.
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const revealTargets = document.querySelectorAll(".work .section-heading, .work-card, .work-note, .service-card, .about-copy, .about-stamp, .contact-copy, .contact-form");
+  revealTargets.forEach((element, index) => {
+    element.classList.add("js-reveal");
+    element.style.transitionDelay = (index % 3) * 70 + "ms";
+  });
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+  revealTargets.forEach(element => revealObserver.observe(element));
+}
+
+// Custom cursor on mouse/trackpad devices only. Native touch and reduced-motion stay untouched.
+if (window.matchMedia("(pointer:fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const cursor = document.createElement("span");
+  const ring = document.createElement("span");
+  cursor.className = "sd-cursor";
+  ring.className = "sd-cursor-ring";
+  cursor.setAttribute("aria-hidden", "true");
+  ring.setAttribute("aria-hidden", "true");
+  document.body.append(cursor, ring);
+  let pointerX = -100, pointerY = -100, ringX = -100, ringY = -100;
+  document.addEventListener("mousemove", event => {
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+    cursor.style.left = pointerX + "px";
+    cursor.style.top = pointerY + "px";
+    document.body.classList.add("cursor-ready");
+  }, { passive: true });
+  const animateRing = () => {
+    ringX += (pointerX - ringX) * 0.19;
+    ringY += (pointerY - ringY) * 0.19;
+    ring.style.left = ringX + "px";
+    ring.style.top = ringY + "px";
+    requestAnimationFrame(animateRing);
+  };
+  requestAnimationFrame(animateRing);
+  document.addEventListener("mouseover", event => {
+    if (event.target.closest("a, button, .work-card, select, input, textarea")) document.body.classList.add("cursor-hover");
+  });
+  document.addEventListener("mouseout", event => {
+    if (event.target.closest("a, button, .work-card, select, input, textarea")) document.body.classList.remove("cursor-hover");
+  });
+  document.addEventListener("mouseleave", () => document.body.classList.remove("cursor-ready"));
+  document.addEventListener("mouseenter", () => document.body.classList.add("cursor-ready"));
+}
+
+// Small tilt on the portfolio cards for a tactile, dimensional feel.
+if (window.matchMedia("(pointer:fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.querySelectorAll(".work-card").forEach(card => {
+    card.addEventListener("mousemove", event => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(1100px) rotateY(${x * 2.6}deg) rotateX(${y * -2.2}deg) translateY(-3px)`;
+    });
+    card.addEventListener("mouseleave", () => { card.style.transform = ""; });
+  });
+}
+
 form?.addEventListener("submit", async event => {
   event.preventDefault();
   if (!form.reportValidity()) return;
