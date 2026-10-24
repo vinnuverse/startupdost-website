@@ -1,10 +1,10 @@
 # StartupDost website
 
-A responsive static website for StartupDost with services, illustrative portfolio concepts, and a project inquiry form.
+A responsive static website for StartupDost with five service areas, illustrative portfolio concepts, and a project inquiry form.
 
 ## Pages and files
 
-- `index.html` — landing page, services, work concepts, about, contact form.
+- `index.html` — landing page, website design & deployment, branding & events, logo & UI/UX, digital marketing, e-commerce growth, work concepts, about, and contact form.
 - `assets/css/styles.css` — responsive styling.
 - `assets/js/main.js` — mobile navigation and form behavior.
 - `google-apps-script/Code.gs` — optional Google Sheets endpoint for inquiries.
