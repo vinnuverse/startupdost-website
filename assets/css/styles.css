@@ -228,3 +228,43 @@ body{background:#17132f;color:#f9f7ff}
 .insight-cta{background:#eae3ff!important}.contact{background:#eae3ff!important;color:#211b42}.contact-copy>p:not(.eyebrow){color:#77728b}.contact-form{background:#fff;border-color:#ded8ee}.contact-form input,.contact-form select,.contact-form textarea{border-color:#e0dced}.footer{background:#17132f;color:#fff}.footer p,.footer>span{color:#c1bad7}.footer .brand>span:last-child{color:#b9a0ff}
 @media(max-width:900px){.hero{grid-template-columns:1fr 1fr}.identity-poster{left:0;width:51%;height:320px;padding:19px}.identity-board{width:47%;padding:16px 13px;top:100px}.identity-symbol{font-size:58px}.identity-poster h3{font-size:clamp(27px,3.2vw,40px)}.board-row b{font-size:9px}.swatches{gap:4px}.swatches i{width:16px;height:16px}}
 @media(max-width:650px){.hero{grid-template-columns:1fr;padding-top:68px;padding-bottom:45px;gap:10px}.hero h1{font-size:clamp(47px,12vw,65px);letter-spacing:-2.7px}.hero .lead{font-size:15px}.hero-art{height:370px;margin:0 -12px;transform:none}.hero .art-glow{width:280px;height:280px}.hero .orbit-one{width:350px;height:230px}.hero .orbit-two{width:300px;height:290px}.identity-poster{left:7%;top:28px;width:49%;height:285px;padding:17px}.identity-label{font-size:6px}.identity-symbol{font-size:49px}.identity-poster h3{font-size:clamp(26px,8vw,39px);letter-spacing:-1.5px}.identity-footer{font-size:5.5px;letter-spacing:.4px}.identity-board{right:4%;top:75px;width:46%;min-height:255px;padding:14px 10px}.board-row{gap:5px;padding-bottom:12px}.board-row b{font-size:8px}.board-row small{font-size:7px;max-width:85px}.swatches{gap:3px}.swatches i{width:13px;height:13px}.typography-row{min-height:85px}.typography-row strong{font-size:29px}.type-notes{padding-left:8px}.type-notes b{font-size:8px}.type-notes small{font-size:7px}.board-colors .swatches i{width:17px;height:17px}.hero .spark-one{left:4%;top:5px}.hero .spark-two{right:4%;bottom:5px}.ticker div{justify-content:flex-start;gap:25px;padding-left:20px}.section:not(.hero){padding-top:72px;padding-bottom:72px}}
+
+/* Royal green is the primary StartupDost brand color */
+:root{--ink:#073f32;--paper:#faf8f1;--green:#006b50;--muted:#667c72;--line:#dce6dc}
+body{background:#faf8f1;color:#073f32}
+.site-header{background:rgba(250,248,241,.96);border-color:#e5e8df;color:#073f32}
+.brand>span:last-child{color:#087454}.brand-mark{background:#006b50;color:#fff}
+.site-header nav>a:not(.nav-cta):hover,.text-link:hover{color:#00815e}
+.nav-cta{background:#006b50;border:1px solid #006b50;color:#fff}.nav-cta span{color:#fff}
+.hero{background:radial-gradient(ellipse at 88% 20%,#dfece1 0,transparent 38%),radial-gradient(ellipse at 0% 100%,#f4e6df 0,transparent 30%),linear-gradient(115deg,#faf8f1,#f7f5ec 68%,#eef3e9)}
+.hero .eyebrow{color:#006b50}.hero .dot{background:#168568}
+.hero h1{color:#073f32}.hero h1 em{color:#168568}.hero .lead{color:#526f64}
+.hero .primary{background:#006b50;color:#fff}.hero .primary span{color:#fff}.hero .primary:hover{background:#00523f}
+.hero .text-link{border-color:#9bb6a8;color:#07503e}.hero .art-glow{background:#80aa91;opacity:.24}.hero .orbit{border-color:#83b19b66}
+.identity-poster{background:linear-gradient(145deg,#08795b,#004b3a);color:#fff;box-shadow:0 25px 65px #123e2b26}
+.identity-board{background:#fffdf8;color:#073f32;box-shadow:0 22px 60px #233b2818}
+.board-row{border-color:#e3e8dd}.board-row small{color:#718278}
+.swatches i{background:#006b50}.swatches i:nth-child(2){background:#83ad91}.swatches i:nth-child(3){background:#dce9dd}.swatches i:nth-child(4){background:#f5e7dc}
+.type-notes{border-color:#e3e8dd}.hero .spark{color:#087454}
+.ticker{background:#006b50;color:#fff}
+.section:not(.hero){background:#faf8f1;color:#073f32}
+.section:not(.hero) .eyebrow{color:#467b66}.section:not(.hero) h2 em{color:#168568}.section:not(.hero) .section-intro{color:#667c72}
+.service-card{background:#fffdf8;border-color:#e4e8de}.service-card.accent-card{background:#e5eee3;border-color:#e5eee3}.service-num{color:#708276}.service-card p{color:#667c72}.service-card>a span{color:#087454}
+.solutions{background:#faf8f1}.solution-card{background:#fffdf8;border-color:#dce6dc}
+.solution-web .solution-art{background:linear-gradient(135deg,#e5eee3,#c6ddce)}.solution-brand .solution-art{background:linear-gradient(135deg,#f7e8e1,#e6d4c9)}.solution-growth .solution-art{background:linear-gradient(135deg,#e2ede5,#c3d9ca)}
+.solution-window-body{background:#e4eee3;color:#073f32}.solution-window-body>span,.solution-window-body b,.solution-copy a,.solution-kicker{color:#087454}
+.solution-window-bar{background:#fffdf8;color:#526f64}.solution-orb{background:#006b50;color:#fff}
+.solution-brand-art{background:#006b50;color:#fff}.solution-brand-art i{color:#d8eadc}.solution-tag{background:#f2e0dc;color:#073f32}
+.growth-panel{background:#e5eee3;color:#073f32}.growth-panel>span,.growth-panel small{color:#467b66}.growth-bars i{background:#168568}.growth-spark{color:#006b50}
+.solutions-note,.work-note{color:#667c72}
+.who-section{background:#edf1e8!important}.audience-grid article{background:#fffdf8}
+.faq-list details{border-color:#dce6dc}.faq-list summary{color:#073f32}.faq-list details p{color:#667c72}
+.insight-cta{background:#e5eee3!important}.insight-cta h2 em{color:#168568}.insight-cta .eyebrow{color:#467b66}.insight-cta p:not(.eyebrow){color:#526f64}
+.contact{background:#e5eee3!important;color:#073f32}.contact-copy>p:not(.eyebrow){color:#667c72}.contact-form{background:#fffdf8;border-color:#dce6dc}.contact-form input,.contact-form select,.contact-form textarea{border-color:#dce6dc}
+.footer{background:#073f32;color:#fff}.footer p,.footer>span{color:#c7d8cc}.footer .brand>span:last-child{color:#83c4a2}
+.work{background:#edf1e8}.work-one .work-visual{background:linear-gradient(135deg,#dce9dd,#b9d2c0)}.work-two .work-visual{background:linear-gradient(135deg,#f5e7dc,#e8d4c9)}
+.mock-pill{background:#e5eee3;color:#006b50}.mock-heading em{color:#168568}.mock-button{background:#006b50;color:#fff}
+.brand-poster{background:#e5eee3;color:#073f32}.poster-flower{color:#006b50}
+.round-arrow{border-color:#b8cbbd}.work-card:hover .round-arrow{background:#006b50;border-color:#006b50}
+.about-stamp{color:#fff}.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#168568}
+@media(max-width:650px){.site-header nav{background:var(--paper);border-color:var(--line)}}
