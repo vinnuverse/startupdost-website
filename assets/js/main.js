@@ -25,7 +25,8 @@ form?.addEventListener("submit", async event => {
   const originalButtonText = submit?.innerHTML || "Send inquiry";
 
   const payload = Object.fromEntries(new FormData(form).entries());
-  payload._subject = "New StartupDost website enquiry";
+  const selectedService = (payload.service || "General enquiry").trim();
+  payload._subject = `New enquiry - ${selectedService}`;
   payload._template = "table";
 
   if (submit) {
