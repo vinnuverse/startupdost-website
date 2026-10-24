@@ -1,0 +1,51 @@
+const GOOGLE_SHEETS_ENDPOINT = ""; // Paste your deployed Google Apps Script Web App /exec URL here.
+
+const form = document.querySelector("#contact-form");
+const statusEl = document.querySelector("#form-status");
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("#nav");
+
+document.querySelector("#year").textContent = new Date().getFullYear();
+
+menuToggle?.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+nav?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+  nav.classList.remove("open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+}));
+
+form?.addEventListener("submit", async event => {
+  event.preventDefault();
+  if (!form.reportValidity()) return;
+  const data = Object.fromEntries(new FormData(form).entries());
+  const submit = form.querySelector('button[type="submit"]');
+  submit.disabled = true;
+  submit.querySelector("span").textContent = "…";
+  statusEl.className = "form-status";
+  if (!GOOGLE_SHEETS_ENDPOINT) {
+    statusEl.textContent = "The form is ready, but submissions are not connected yet. Please email hello@startupdost.online, or configure the Google Sheets endpoint in assets/js/main.js.";
+    statusEl.style.color = "#9a5b19";
+    submit.disabled = false;
+    submit.querySelector("span").textContent = "↗";
+    return;
+  }
+  try {
+    await fetch(GOOGLE_SHEETS_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+      body: new URLSearchParams(data).toString()
+    });
+    statusEl.textContent = "Thanks for reaching out! Your inquiry has been sent. If you need to follow up, email hello@startupdost.online.";
+    statusEl.style.color = "#466a24";
+    form.reset();
+  } catch (error) {
+    statusEl.textContent = "We couldn't submit your inquiry right now. Please email hello@startupdost.online.";
+    statusEl.style.color = "#9a3d2b";
+  } finally {
+    submit.disabled = false;
+    submit.querySelector("span").textContent = "↗";
+  }
+});
