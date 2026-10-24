@@ -1,4 +1,4 @@
-const GOOGLE_SHEETS_ENDPOINT = ""; // Paste your deployed Google Apps Script Web App /exec URL here.
+const GOOGLE_SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzZ-xiooKSf6j4dK7L958JprSuKVhm9fY2a_7KR4tK9byrjZOcOUE5e74BT5Om24ha8Ng/exec";
 
 const form = document.querySelector("#contact-form");
 const statusEl = document.querySelector("#form-status");
