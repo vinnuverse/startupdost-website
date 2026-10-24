@@ -40,3 +40,11 @@ h1 em,h2 em{color:#6554c0}
 .form-status{color:#6554a4}
 .linkedin{border-color:#b9ade8}
 @media(prefers-reduced-motion:no-preference){.service-card,.button,.nav-cta{transition:transform .2s ease,background .2s ease,border-color .2s ease}.service-card:hover{transform:translateY(-4px);border-color:#c9bdf5}}
+
+
+/* Contact form success state */
+.form-success{min-height:360px;padding:clamp(28px,5vw,54px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;background:#fff;border:1px solid #ded8f5;border-radius:5px}
+.success-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#e9e5ff;color:#6554c0;font-size:25px;font-weight:700;margin-bottom:24px}
+.form-success .eyebrow{margin:0 0 12px}
+.form-success h3{font-size:clamp(25px,3vw,36px);line-height:1.15;letter-spacing:-1px;margin:0 0 14px;color:var(--ink)}
+.form-success p:last-child{font-size:14px;line-height:1.8;color:var(--muted);max-width:340px;margin:0}
