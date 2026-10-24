@@ -38,8 +38,8 @@ form?.addEventListener("submit", async event => {
       headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
       body: new URLSearchParams(data).toString()
     });
-    statusEl.textContent = "Thanks for reaching out! Your inquiry has been sent. If you need to follow up, email hello@startupdost.online.";
-    statusEl.style.color = "#466a24";
+    statusEl.textContent = "Your inquiry request was sent. Because Google Apps Script does not expose the result to this page in no-cors mode, please verify the new row in our Google Sheet. If it does not appear, email hello@startupdost.online.";
+    statusEl.style.color = "#9a5b19";
     form.reset();
   } catch (error) {
     statusEl.textContent = "We couldn't submit your inquiry right now. Please email hello@startupdost.online.";
