@@ -1,4 +1,4 @@
-const GOOGLE_SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzZ-xiooKSf6j4dK7L958JprSuKVhm9fY2a_7KR4tK9byrjZOcOUE5e74BT5Om24ha8Ng/exec";
+const GOOGLE_SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbySUNrLeNOPExEpP19Z9Y1FSktXo_7EZZz94994ftnCYicx7he2py6Uzp7uLTKYshSW/exec";
 
 const form = document.querySelector("#contact-form");
 const statusEl = document.querySelector("#form-status");
