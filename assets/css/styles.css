@@ -3,3 +3,40 @@
 @media(max-width:900px){.section{padding-left:6%;padding-right:6%}.site-header{padding:0 5%}.hero{gap:0}.hero-art{transform:scale(.9)}.float-top{right:-15px}.section-heading{align-items:flex-start;flex-direction:column;gap:18px}.section-intro{max-width:500px}.contact{gap:5%}.contact-form{padding:23px}}
 @media(max-width:650px){.site-header{height:70px}.menu-toggle{display:block;border:0;background:none;font-size:24px}.site-header nav{display:none;position:absolute;left:0;right:0;top:69px;padding:22px 6%;background:var(--paper);border-bottom:1px solid var(--line);align-items:stretch;gap:20px;flex-direction:column}.site-header nav.open{display:flex}.nav-cta{text-align:center}.hero{grid-template-columns:1fr;padding-top:62px;padding-bottom:45px}.hero h1{font-size:54px}.hero-art{height:390px;transform:scale(.88);margin:5px -25px -5px}.ticker{font-size:9px}.ticker div{justify-content:flex-start;gap:25px;min-width:850px}.section{padding-top:75px;padding-bottom:75px}.section-heading h2,.about h2,.contact h2{font-size:43px}.service-grid{grid-template-columns:1fr}.service-card{min-height:235px}.service-icon{margin-top:17px}.work-grid{grid-template-columns:1fr;gap:15px}.work-visual{height:290px}.about{grid-template-columns:1fr;gap:45px}.about-stamp{width:185px;height:185px;font-size:20px}.contact{grid-template-columns:1fr;gap:35px}.contact-form{padding:22px}.form-top{font-size:7px}.footer{flex-wrap:wrap}.footer p{order:3;width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* StartupDost refreshed violet + cobalt theme */
+:root{--ink:#19172e;--paper:#f8f7ff;--green:#b9a7ff;--muted:#74718b;--line:#e1def0}
+.brand>span:last-child{color:#6554c0}
+.brand-mark{background:var(--green)}
+.site-header{background:rgba(248,247,255,.94)}
+.site-header nav>a:not(.nav-cta):hover,.text-link:hover{color:#6554c0}
+.nav-cta{background:#19172e}.nav-cta span,.primary span{color:#b9a7ff}
+.primary:hover{background:#343052}
+.eyebrow{color:#6554a4}.dot{background:#7562d5}
+h1 em,h2 em{color:#6554c0}
+.avatar-stack span{background:#e6e0ff;border-color:var(--paper)}
+.avatar-stack span:first-child{background:#ffe0d1}.avatar-stack span:last-child{background:#d9e5ff}
+.art-glow{background:#e7e0ff}.orbit{border-color:#c9bdf5}
+.card-main{background:#b9a7ff}
+.float-card{background:#fff;border-color:#e7e2f6}
+.float-icon{background:#ece7ff}
+.spark{color:#7562d5}
+.ticker{background:#19172e;color:#f8f7ff}.ticker span{color:#b9a7ff}
+.service-card{background:#fff;border-color:var(--line)}
+.service-card.accent-card{background:#eeeaff;border-color:#eeeaff}
+.service-card>a span{color:#6554c0}
+.work{background:#efedfa}
+.work-one .work-visual{background:#dcd5ff}
+.work-two .work-visual{background:#ffe2d2}
+.mock-pill{background:#e5dfff}
+.mock-heading em{color:#6554c0}
+.brand-poster{background:#fff0e6}
+.poster-flower{color:#6554c0}
+.about-stamp{background:#b9a7ff}
+.contact{background:#e9e5ff}
+.contact-form{border-color:#ded8f5}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#7562d5}
+.form-status{color:#6554a4}
+.linkedin{border-color:#b9ade8}
+@media(prefers-reduced-motion:no-preference){.service-card,.button,.nav-cta{transition:transform .2s ease,background .2s ease,border-color .2s ease}.service-card:hover{transform:translateY(-4px);border-color:#c9bdf5}}
