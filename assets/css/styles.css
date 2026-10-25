@@ -475,3 +475,26 @@ body{background:#faf8f1;color:#073f32}
  .sd-cursor:before{transform-origin:center;animation:sdJupiterRotate 5s linear infinite,sdJupiterBands 9s linear infinite!important}
  @keyframes sdJupiterRotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 }
+
+
+/* Orbital rings rotate around Jupiter, not like clock hands */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .sd-cursor-ring{
+   transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)!important;
+   animation:sdRingOrbit 6s linear infinite!important;
+   border-width:2px!important;
+ }
+ .sd-cursor-ring:before{
+   transform-origin:center!important;
+   animation:sdDashedOrbit 9s linear infinite!important;
+ }
+ @keyframes sdRingOrbit{
+   0%{transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)}
+   50%{transform:translate(-50%,-50%) rotate(62deg) scaleY(.34)}
+   100%{transform:translate(-50%,-50%) rotate(152deg) scaleY(.34)}
+ }
+ @keyframes sdDashedOrbit{
+   0%{transform:scaleY(1.4) rotate(0deg)}
+   100%{transform:scaleY(1.4) rotate(360deg)}
+ }
+}
