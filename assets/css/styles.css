@@ -442,3 +442,15 @@ body{background:#faf8f1;color:#073f32}
  @keyframes sdOrbitSpin{to{transform:rotate(360deg)}}
 }
 @media (pointer:coarse),(prefers-reduced-motion:reduce){.sd-cursor,.sd-cursor-ring{display:none!important}body,a,button,select,input,textarea{cursor:auto!important}}
+
+/* Jupiter cursor: approximately 0.5 cm across */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .sd-cursor{width:19px!important;height:19px!important;border-radius:50%;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 28% 23%,#fff4df 0,#e9cba0 24%,#c99a6c 57%,#80583e 100%)!important;box-shadow:inset -3px -2px 5px #593c2c80,0 1px 7px #60442b55!important;transition:width .2s,height .2s,opacity .2s!important}
+ .sd-cursor:before{content:""!important;position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(0deg,transparent 0 2px,#a66c4b 2px 3.5px,#f1d7b1 3.5px 5px,#c18a62 5px 6px,#ead0a7 6px 8px)!important;mix-blend-mode:multiply;animation:sdJupiterBands 9s linear infinite!important}
+ .sd-cursor:after{content:""!important;position:absolute;inset:1px;border-radius:50%;background:radial-gradient(ellipse at 65% 61%,#a94732 0 9%,#c76d4b 10% 13%,transparent 14%),linear-gradient(115deg,#fff9,transparent 38% 72%,#38201266)!important;pointer-events:none}
+ body.cursor-hover .sd-cursor{width:19px!important;height:19px!important;box-shadow:inset -3px -2px 5px #593c2c80,0 0 0 3px #d7a66a35,0 1px 8px #60442b66!important}
+ .sd-cursor-ring{border-color:#c18a62!important;box-shadow:0 0 0 4px #c18a6215!important}
+ .sd-cursor-ring:before{border-color:#c18a6270!important}
+ body.cursor-hover .sd-cursor-ring{border-color:#a66c4b!important;background:#d7a66a20!important}
+ @keyframes sdJupiterBands{0%{background-position:0 0}100%{background-position:0 24px}}
+}
