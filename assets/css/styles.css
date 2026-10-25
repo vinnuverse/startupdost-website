@@ -425,3 +425,20 @@ body{background:#faf8f1;color:#073f32}
 
 /* Keep the six core services in a balanced two-column grid on About */
 @media(min-width:651px){.about-service-card:last-child{grid-column:auto}}
+
+/* Cursor upgrade v2 — animated Earth, orbital ring and interaction states */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ body.cursor-ready,body.cursor-ready a,body.cursor-ready button,body.cursor-ready select,body.cursor-ready input,body.cursor-ready textarea{cursor:none!important}
+ .sd-cursor,.sd-cursor-ring{display:block!important;position:fixed;pointer-events:none;z-index:99999;border-radius:50%;opacity:0;transform:translate(-50%,-50%);will-change:left,top,transform;transition:opacity .2s}
+ body.cursor-ready .sd-cursor,body.cursor-ready .sd-cursor-ring{opacity:1}
+ .sd-cursor{width:22px;height:22px;overflow:hidden;background:radial-gradient(circle at 28% 24%,#d8fbff 0 4%,transparent 22%),radial-gradient(circle at 62% 70%,#1477b7 0,#07528c 58%,#032e55 100%);box-shadow:inset -4px -4px 7px #00244388,0 2px 9px #064e3b35;transition:width .2s,height .2s,opacity .2s}
+ .sd-cursor:before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse at 30% 32%,#70c978 0 15%,transparent 16%),radial-gradient(ellipse at 68% 45%,#a2dc7e 0 17%,transparent 18%),radial-gradient(ellipse at 43% 76%,#389f61 0 13%,transparent 14%);animation:sdGlobeSpin 7s linear infinite}
+ .sd-cursor:after{content:"";position:absolute;inset:1px;border-radius:50%;background:linear-gradient(115deg,#fff8,transparent 40% 70%,#00172f66)}
+ .sd-cursor-ring{width:39px;height:39px;border:1px solid #08795b;box-shadow:0 0 0 4px #08795b12;transform:translate(-50%,-50%) rotate(-28deg) scaleY(.72);transition:width .25s,height .25s,border-color .25s,background .25s,opacity .2s}
+ .sd-cursor-ring:before{content:"";position:absolute;inset:-5px;border:1px dashed #08795b55;border-radius:50%;animation:sdOrbitSpin 12s linear infinite}
+ body.cursor-hover .sd-cursor{width:28px;height:28px}
+ body.cursor-hover .sd-cursor-ring{width:54px;height:54px;border-color:#005c45;background:#74b99a1c}
+ @keyframes sdGlobeSpin{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.04)}100%{transform:rotate(360deg) scale(1)}}
+ @keyframes sdOrbitSpin{to{transform:rotate(360deg)}}
+}
+@media (pointer:coarse),(prefers-reduced-motion:reduce){.sd-cursor,.sd-cursor-ring{display:none!important}body,a,button,select,input,textarea{cursor:auto!important}}
