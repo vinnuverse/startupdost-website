@@ -422,3 +422,6 @@ body{background:#faf8f1;color:#073f32}
 .services-cta .primary{background:#006b50;color:#fff;white-space:nowrap}
 @media(max-width:850px){.services-page .services-hero{gap:5%;padding-left:6%;padding-right:6%}.services-hero-panel{min-height:330px;padding:22px}.services-detail-card{padding:23px;min-height:365px}.services-process{gap:5%}}
 @media(max-width:650px){.services-page .services-hero{grid-template-columns:1fr;padding-top:55px;padding-bottom:55px}.services-hero-panel{min-height:310px}.services-detail-grid{grid-template-columns:1fr}.services-detail-card{min-height:0;padding:25px}.services-process{grid-template-columns:1fr;gap:25px}.services-cta{align-items:flex-start;flex-direction:column}.services-page .section{padding:65px 7%}}
+
+/* Keep the six core services in a balanced two-column grid on About */
+@media(min-width:651px){.about-service-card:last-child{grid-column:auto}}
