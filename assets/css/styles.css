@@ -454,3 +454,9 @@ body{background:#faf8f1;color:#073f32}
  body.cursor-hover .sd-cursor-ring{border-color:#a66c4b!important;background:#d7a66a20!important}
  @keyframes sdJupiterBands{0%{background-position:0 0}100%{background-position:0 24px}}
 }
+
+/* Double the Jupiter cursor size: 38px (~1 cm at 96dpi) */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .sd-cursor{width:38px!important;height:38px!important}
+ body.cursor-hover .sd-cursor{width:38px!important;height:38px!important}
+}
