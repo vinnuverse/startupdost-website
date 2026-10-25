@@ -323,3 +323,23 @@ body{background:#faf8f1;color:#073f32}
 @media(max-width:900px){.hero.section .hero-art.service-showcase{height:440px}.service-showcase .showcase-card{flex-basis:70px;min-height:70px}.service-showcase .showcase-card.showcase-feature{flex-basis:210px;min-height:200px}.service-showcase:has(.showcase-card:hover) .showcase-card{flex-basis:70px;min-height:70px}.service-showcase .showcase-card:hover{flex-basis:210px!important;min-height:200px!important}}
 @media(max-width:650px){.hero.section .hero-art.service-showcase{height:auto;min-height:0;gap:10px;padding:12px 4px 15px}.service-showcase .showcase-card,.service-showcase:has(.showcase-card:hover) .showcase-card{flex:0 0 auto;min-height:110px;padding:16px 18px}.service-showcase .showcase-card h3,.service-showcase:has(.showcase-card:hover) .showcase-card h3{font-size:20px;margin-top:8px}.service-showcase .showcase-card p{display:block;font-size:11px;line-height:1.45;margin-top:7px}.service-showcase .showcase-card.showcase-feature,.service-showcase .showcase-card:hover{flex:0 0 auto!important;min-height:180px!important;padding:21px!important}.service-showcase .showcase-card.showcase-feature h3,.service-showcase .showcase-card:hover h3{font-size:31px!important;margin-top:17px}.service-showcase .showcase-card:not(.showcase-feature) .showcase-arrow{bottom:12px}.service-showcase .showcase-foot{margin-top:4px}}
 @media(prefers-reduced-motion:reduce){.service-showcase .showcase-card{transition:none}}
+
+/* Earth cursor: animated globe with a royal-green orbit */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .sd-cursor{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#c7f1ff 0 5%,transparent 20%),radial-gradient(circle at 68% 72%,#1264a3 0,#07518a 55%,#06365e 100%);mix-blend-mode:normal;box-shadow:inset -4px -3px 7px #062b4f88,0 1px 5px #073f3244;overflow:hidden;transition:width .22s,height .22s,opacity .2s}
+  .sd-cursor:before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse at 33% 32%,#63b96f 0 17%,transparent 18%),radial-gradient(ellipse at 66% 48%,#8bd17b 0 16%,transparent 17%),radial-gradient(ellipse at 42% 75%,#369d5e 0 13%,transparent 14%);transform:rotate(-20deg);animation:sdEarthRotate 5s linear infinite}
+  .sd-cursor:after{content:"";position:absolute;inset:1px;border-radius:50%;background:linear-gradient(115deg,#ffffff65,transparent 40% 72%,#001b3b55);pointer-events:none}
+  .sd-cursor-ring{width:40px;height:40px;border:1px solid #08795b;box-shadow:0 0 0 4px #08795b12;transform:translate(-50%,-50%) rotate(-28deg) scaleY(.72);transition:width .25s,height .25s,border-color .25s,background .25s,opacity .2s}
+  body.cursor-hover .sd-cursor{width:29px;height:29px}
+  body.cursor-hover .sd-cursor-ring{width:52px;height:52px;border-color:#006b50;background:#83ad9115}
+}
+@keyframes sdEarthRotate{0%{transform:rotate(0deg) scaleX(1)}50%{transform:rotate(180deg) scaleX(.86)}100%{transform:rotate(360deg) scaleX(1)}}
+/* Keep collapsed service cards fully readable instead of clipping the second line */
+.service-showcase .showcase-card{flex:0 0 98px;min-height:98px;padding:14px 20px}
+.service-showcase .showcase-card h3{font-size:17px;line-height:1.16;margin-top:7px;max-width:78%}
+.service-showcase:has(.showcase-card:hover) .showcase-card{flex:0 0 98px;min-height:98px}
+.service-showcase:has(.showcase-card:hover) .showcase-card h3{font-size:16px;margin-top:6px}
+.service-showcase .showcase-card.showcase-feature{flex:1 1 220px;min-height:220px}
+.service-showcase .showcase-card:hover{flex:1 1 220px!important;min-height:220px!important}
+@media(max-width:900px){.service-showcase .showcase-card,.service-showcase:has(.showcase-card:hover) .showcase-card{flex-basis:92px;min-height:92px}.service-showcase .showcase-card.showcase-feature,.service-showcase .showcase-card:hover{flex-basis:200px!important;min-height:200px!important}}
+@media(max-width:650px){.service-showcase .showcase-card,.service-showcase:has(.showcase-card:hover) .showcase-card{flex:0 0 auto;min-height:110px}.service-showcase .showcase-card h3,.service-showcase:has(.showcase-card:hover) .showcase-card h3{font-size:20px;margin-top:8px}}
