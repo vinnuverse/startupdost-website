@@ -460,3 +460,12 @@ body{background:#faf8f1;color:#073f32}
  .sd-cursor{width:38px!important;height:38px!important}
  body.cursor-hover .sd-cursor{width:38px!important;height:38px!important}
 }
+
+/* Make Jupiter's planetary rings unmistakable */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .sd-cursor{overflow:visible!important}
+ .sd-cursor:before{clip-path:circle(50%)}
+ .sd-cursor-ring{width:62px!important;height:62px!important;border:2px solid #c18a62!important;border-radius:50%!important;transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)!important;box-shadow:0 0 0 2px #e6c99a55!important;background:transparent!important}
+ .sd-cursor-ring:before{inset:-5px!important;border:1px dashed #a66c4b!important;border-radius:50%!important;transform:scaleY(1.4);animation:sdOrbitSpin 7s linear infinite!important}
+ body.cursor-hover .sd-cursor-ring{width:72px!important;height:72px!important;border-color:#a66c4b!important;background:transparent!important}
+}
