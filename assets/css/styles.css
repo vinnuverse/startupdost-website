@@ -298,3 +298,28 @@ body{background:#faf8f1;color:#073f32}
 .showcase-dot{width:7px;height:7px;border-radius:50%;background:#08795b;display:inline-block}
 @media(max-width:900px){.hero.section{grid-template-columns:1fr 1fr}.hero.section .hero-art{padding-left:6px}.showcase-card{padding:16px}.showcase-feature{padding:20px}.showcase-card h3{font-size:19px}.showcase-feature h3{font-size:30px}}
 @media(max-width:650px){.hero.section{grid-template-columns:1fr}.hero.section .hero-art{height:auto;min-height:430px;padding:12px 4px 15px;margin:0}.service-showcase .showcase-heading,.service-showcase .showcase-foot{font-size:8px}.showcase-feature{min-height:180px;padding:21px}.showcase-card{min-height:92px;padding:15px 18px}.showcase-card h3{font-size:20px}.showcase-feature h3{font-size:32px}.showcase-icon{right:18px;top:15px}.showcase-arrow{right:18px;bottom:12px}}
+
+/* Expand-on-hover hero cards: one full-size, two compact but readable */
+.hero.section .hero-art.service-showcase{height:465px;min-height:0;gap:10px;align-items:stretch}
+.service-showcase .showcase-heading{flex:0 0 auto;letter-spacing:2px}
+.service-showcase .showcase-card{flex:0 0 76px;min-height:76px;padding:13px 20px;transition:flex-basis .35s ease,min-height .35s ease,padding .35s ease,background .25s ease;cursor:default}
+.service-showcase .showcase-card h3{font-size:18px;line-height:1.15;margin:8px 0 0;max-width:78%;white-space:normal}
+.service-showcase .showcase-card .showcase-index{font-size:9px}
+.service-showcase .showcase-card .showcase-icon{top:15px;right:20px;font-size:23px}
+.service-showcase .showcase-card .showcase-arrow{right:20px;bottom:12px;font-size:18px}
+.service-showcase .showcase-card p{display:none}
+.service-showcase .showcase-card.showcase-feature{flex:1 1 230px;min-height:220px;padding:24px 26px}
+.service-showcase .showcase-card.showcase-feature h3{font-size:clamp(30px,3.2vw,42px);line-height:1.02;margin-top:20px;max-width:90%}
+.service-showcase .showcase-card.showcase-feature p{display:block;font-size:12px;line-height:1.5;margin-top:12px;max-width:310px}
+.service-showcase .showcase-card:not(.showcase-feature) h3{font-size:18px;line-height:1.15}
+.service-showcase .showcase-card:not(.showcase-feature) .showcase-arrow{opacity:.95}
+.service-showcase:has(.showcase-card:hover) .showcase-card{flex:0 0 76px;min-height:76px}
+.service-showcase:has(.showcase-card:hover) .showcase-card h3{font-size:17px;margin-top:6px}
+.service-showcase:has(.showcase-card:hover) .showcase-card p{display:none}
+.service-showcase .showcase-card:hover{flex:1 1 230px!important;min-height:220px!important;padding:24px 26px}
+.service-showcase .showcase-card:hover h3{font-size:clamp(28px,3vw,38px)!important;line-height:1.03;margin-top:18px;max-width:90%}
+.service-showcase .showcase-card:hover p{display:block;font-size:12px;line-height:1.5;margin-top:10px;max-width:310px}
+.service-showcase .showcase-foot{flex:0 0 auto}
+@media(max-width:900px){.hero.section .hero-art.service-showcase{height:440px}.service-showcase .showcase-card{flex-basis:70px;min-height:70px}.service-showcase .showcase-card.showcase-feature{flex-basis:210px;min-height:200px}.service-showcase:has(.showcase-card:hover) .showcase-card{flex-basis:70px;min-height:70px}.service-showcase .showcase-card:hover{flex-basis:210px!important;min-height:200px!important}}
+@media(max-width:650px){.hero.section .hero-art.service-showcase{height:auto;min-height:0;gap:10px;padding:12px 4px 15px}.service-showcase .showcase-card,.service-showcase:has(.showcase-card:hover) .showcase-card{flex:0 0 auto;min-height:110px;padding:16px 18px}.service-showcase .showcase-card h3,.service-showcase:has(.showcase-card:hover) .showcase-card h3{font-size:20px;margin-top:8px}.service-showcase .showcase-card p{display:block;font-size:11px;line-height:1.45;margin-top:7px}.service-showcase .showcase-card.showcase-feature,.service-showcase .showcase-card:hover{flex:0 0 auto!important;min-height:180px!important;padding:21px!important}.service-showcase .showcase-card.showcase-feature h3,.service-showcase .showcase-card:hover h3{font-size:31px!important;margin-top:17px}.service-showcase .showcase-card:not(.showcase-feature) .showcase-arrow{bottom:12px}.service-showcase .showcase-foot{margin-top:4px}}
+@media(prefers-reduced-motion:reduce){.service-showcase .showcase-card{transition:none}}
