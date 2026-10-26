@@ -131,3 +131,95 @@ form?.addEventListener("submit", async event => {
     }
   }
 });
+
+
+// Accessible tabs for the homepage capability showcase.
+const solutionTabs = [...document.querySelectorAll("[data-solution-tab]")];
+const solutionPanels = solutionTabs.map(tab => document.getElementById(tab.dataset.solutionTab)).filter(Boolean);
+function activateSolutionTab(tab, moveFocus = false) {
+  const targetId = tab.dataset.solutionTab;
+  solutionTabs.forEach(item => {
+    const active = item === tab;
+    item.classList.toggle("is-active", active);
+    item.setAttribute("aria-selected", String(active));
+    item.tabIndex = active ? 0 : -1;
+  });
+  solutionPanels.forEach(panel => {
+    const active = panel.id === targetId;
+    panel.hidden = !active;
+    panel.classList.toggle("is-active", active);
+  });
+  if (moveFocus) tab.focus();
+}
+solutionTabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => activateSolutionTab(tab));
+  tab.addEventListener("keydown", event => {
+    if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    let next = index;
+    if (event.key === "ArrowRight") next = (index + 1) % solutionTabs.length;
+    if (event.key === "ArrowLeft") next = (index - 1 + solutionTabs.length) % solutionTabs.length;
+    if (event.key === "Home") next = 0;
+    if (event.key === "End") next = solutionTabs.length - 1;
+    activateSolutionTab(solutionTabs[next], true);
+  });
+});
+
+// Lightweight, responsive hero particles; no external library or images required.
+const particleCanvas = document.querySelector(".hero-particles");
+if (particleCanvas && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const ctx = particleCanvas.getContext("2d");
+  if (ctx) {
+    let particles = [];
+    let width = 0, height = 0, frame = 0;
+    const pointer = { x: -1000, y: -1000 };
+    const resizeParticles = () => {
+      const rect = particleCanvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      width = rect.width; height = rect.height;
+      particleCanvas.width = Math.round(width * dpr);
+      particleCanvas.height = Math.round(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const count = Math.min(58, Math.max(22, Math.round(width / 20)));
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * width, y: Math.random() * height,
+        vx: (Math.random() - .5) * .24, vy: (Math.random() - .5) * .24,
+        r: Math.random() * 1.8 + .7
+      }));
+    };
+    const drawParticles = () => {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+        const dx = p.x - pointer.x, dy = p.y - pointer.y;
+        if (dx * dx + dy * dy < 10000) { p.x += dx * .0008; p.y += dy * .0008; }
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(105, 139, 54, .5)"; ctx.fill();
+        for (let j = i + 1; j < particles.length; j++) {
+          const q = particles[j], x = p.x - q.x, y = p.y - q.y;
+          const distance = Math.hypot(x, y);
+          if (distance < 105) {
+            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = "rgba(105, 139, 54, " + (.12 * (1 - distance / 105)) + ")";
+            ctx.lineWidth = .7; ctx.stroke();
+          }
+        }
+      }
+      frame = requestAnimationFrame(drawParticles);
+    };
+    resizeParticles();
+    frame = requestAnimationFrame(drawParticles);
+    window.addEventListener("resize", resizeParticles, { passive: true });
+    particleCanvas.closest(".hero")?.addEventListener("pointermove", event => {
+      const rect = particleCanvas.getBoundingClientRect();
+      pointer.x = event.clientX - rect.left; pointer.y = event.clientY - rect.top;
+    }, { passive: true });
+    particleCanvas.closest(".hero")?.addEventListener("pointerleave", () => {
+      pointer.x = -1000; pointer.y = -1000;
+    }, { passive: true });
+    window.addEventListener("pagehide", () => cancelAnimationFrame(frame), { once: true });
+  }
+}
