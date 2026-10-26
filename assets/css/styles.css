@@ -703,3 +703,60 @@ h1 em,h2 em,.section-heading h2 em,.hero h1 em,.hero h2 em{color:#54751c}
 .advantage-grid p{font-size:13px;line-height:1.7;color:#c5c7bd;margin:0}
 @media(max-width:800px){.advantage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.advantage-grid article:nth-child(2){border-right:0;margin-right:0}.advantage-grid article:nth-child(3),.advantage-grid article:nth-child(4){border-top:1px solid #41433b}}
 @media(max-width:480px){.advantage-grid{grid-template-columns:1fr}.advantage-grid article{border-right:0;margin-right:0;border-top:1px solid #41433b;padding:22px 0}.advantage-grid article:first-child{border-top:0}}
+
+
+/* STARTUPDOST BRAND PALETTE: BLACK / VIOLET / WHITE / LIME */
+:root{
+ --ink:#000000;
+ --violet:#7E3BED;
+ --paper:#FFFFFF;
+ --lime:#C6FF34;
+ --muted:#5c5863;
+ --line:#e8e3ef;
+ --green:#C6FF34;
+ color-scheme:light;
+}
+body,main{background:#fff!important;color:#000!important}
+.site-header{background:rgba(255,255,255,.96)!important;color:#000!important;border-bottom-color:#e8e3ef!important}
+.site-header nav a,.brand{color:#000!important}
+.site-header nav a:hover,.site-header nav a.active{color:#7E3BED!important}
+.site-header .nav-cta,.nav-cta{background:#000!important;color:#C6FF34!important;border-color:#000!important}
+.site-header .nav-cta:hover,.nav-cta:hover{background:#C6FF34!important;color:#000!important;border-color:#C6FF34!important}
+h1,h2,h3,h4,.section-heading h2,.hero h1,.hero h2{color:#000!important}
+h1 em,h2 em,.section-heading h2 em,.hero h1 em,.hero h2 em{color:#7E3BED!important}
+.eyebrow,.section-heading .eyebrow,.service-num,.service-label,.solution-kicker{color:#7E3BED!important}
+.dot,.showcase-dot{background:#C6FF34!important;box-shadow:0 0 0 5px rgba(198,255,52,.25)!important}
+.button.primary,.primary,.submit-button,.services-detail-card>a,.service-card>a{background:#000!important;color:#C6FF34!important;border-color:#000!important}
+.button.primary:hover,.primary:hover,.submit-button:hover,.services-detail-card>a:hover,.service-card>a:hover{background:#C6FF34!important;color:#000!important;border-color:#C6FF34!important}
+.button.secondary{background:#fff!important;color:#000!important;border-color:#000!important}
+.button.secondary:hover{background:#7E3BED!important;color:#fff!important;border-color:#7E3BED!important}
+.solution-tabs{background:#f5f1fb!important;border-color:#e4d8fb!important}
+.solution-tab{color:#29222f!important}
+.solution-tab.is-active{background:#7E3BED!important;color:#fff!important}
+.solution-tab.is-active span,.solution-tab span{color:#C6FF34!important}
+.service-card,.solution-card,.services-detail-card,.about-service-card,.work-project,.faq-list details,.growth-points,.contact-form,.audience-grid article,.process-step{background:#fff!important;color:#000!important;border-color:#e8e3ef!important}
+.service-card h3,.solution-card h3,.services-detail-card h3,.about-service-card h3,.work-project h3,.faq-list summary,.audience-grid h3,.process-step h3{color:#000!important}
+.service-card p,.solution-card p,.services-detail-card p,.about-service-card p,.work-project p,.faq-list details p,.audience-grid p,.process-step p{color:#5c5863!important}
+.service-symbol,.mission-symbol,.growth-point-icon{background:#f0e8ff!important;color:#7E3BED!important}
+.project-tags span,.service-tag,.tag{background:#f0e8ff!important;color:#5b2ab5!important}
+.contact,.contact.section,.about-why,.services-process,.services-cta,.who-section{background:#f8f5fc!important;color:#000!important}
+.contact-form input,.contact-form select,.contact-form textarea,.contact-page .contact-form input,.contact-page .contact-form select,.contact-page .contact-form textarea{background:#fff!important;color:#000!important;border-color:#ded5ec!important}
+.footer,.contact-page .footer{background:#000!important;color:#fff!important;border-color:#292929!important}
+.footer p,.footer>span,.footer .brand{color:#fff!important}
+.footer .brand-mark{background:#C6FF34!important;color:#000!important}
+.footer .brand>span:last-child{color:#C6FF34!important}
+.showcase-feature{background:#7E3BED!important;color:#fff!important}
+.showcase-feature h3,.showcase-feature p,.showcase-feature .showcase-index{color:#fff!important}
+.showcase-digital{background:#000!important;color:#fff!important}
+.showcase-digital h3,.showcase-digital .showcase-index{color:#fff!important}
+.showcase-growth{background:#C6FF34!important;color:#000!important}
+.showcase-growth h3,.showcase-growth .showcase-index{color:#000!important}
+.showcase-icon{background:rgba(255,255,255,.18)!important;color:inherit!important}
+.service-card.accent-card,.services-detail-card.featured{background:#f5f0ff!important;border-color:#d9c5ff!important}
+.brand-advantage{background:#000!important;color:#fff!important}
+.brand-advantage .section-heading h2,.brand-advantage h3{color:#fff!important}
+.brand-advantage .section-heading h2 em,.brand-advantage .eyebrow,.advantage-grid article>span{color:#C6FF34!important}
+.brand-advantage .section-intro,.advantage-grid p{color:#e2dce9!important}
+.advantage-grid{border-color:#38313f!important}
+.advantage-grid article{border-color:#38313f!important}
+.hero-particles{opacity:.65}
