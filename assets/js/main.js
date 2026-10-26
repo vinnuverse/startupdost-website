@@ -197,13 +197,13 @@ if (particleCanvas && !window.matchMedia("(prefers-reduced-motion: reduce)").mat
         const dx = p.x - pointer.x, dy = p.y - pointer.y;
         if (dx * dx + dy * dy < 10000) { p.x += dx * .0008; p.y += dy * .0008; }
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(105, 139, 54, .5)"; ctx.fill();
+        ctx.fillStyle = "rgba(197, 255, 74, .72)"; ctx.fill();
         for (let j = i + 1; j < particles.length; j++) {
           const q = particles[j], x = p.x - q.x, y = p.y - q.y;
           const distance = Math.hypot(x, y);
           if (distance < 105) {
             ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = "rgba(105, 139, 54, " + (.12 * (1 - distance / 105)) + ")";
+            ctx.strokeStyle = "rgba(197, 255, 74, " + (.18 * (1 - distance / 105)) + ")";
             ctx.lineWidth = .7; ctx.stroke();
           }
         }
