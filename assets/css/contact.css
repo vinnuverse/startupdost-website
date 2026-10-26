@@ -1,23 +1,23 @@
 .contact-page{background:#faf8f1;color:#123f32}.contact-page .brand-mark{background:#006b50;color:#fff}.contact-page .brand>span:last-child{color:#087454}.contact-page .site-header{background:rgba(250,248,241,.96)}.contact-page .nav-cta{background:#006b50;color:#fff}.contact-page .contact-hero{display:grid;grid-template-columns:1.05fr .8fr;gap:8%;align-items:center;padding-top:76px;padding-bottom:76px;background:radial-gradient(ellipse at 80% 20%,#e2eee3 0,transparent 40%),#faf8f1}.contact-hero h1{font-size:clamp(45px,6vw,76px);line-height:1.02;letter-spacing:-3px;margin:20px 0;color:#123f32}.contact-hero h1 em{font-family:Georgia,serif;color:#08795b;font-weight:400}.contact-hero .eyebrow{color:#08795b}.contact-intro{max-width:560px;font-size:16px;line-height:1.85;color:#52685f}.contact-highlights{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.contact-highlights span{border:1px solid #dce6da;border-radius:40px;padding:10px 13px;font-size:11px;color:#315d4b;background:#fffdf8}.contact-orbit{min-height:330px;border-radius:16px;background:linear-gradient(145deg,#08795b,#004735);color:#fff;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:26px;box-shadow:0 22px 55px #123e2b20}.contact-orbit:before,.contact-orbit:after{content:"";position:absolute;width:290px;height:290px;border:1px solid #ffffff2c;border-radius:50%;right:-60px;top:15px}.contact-orbit:after{width:365px;height:365px;right:-97px;top:-22px}.orbit-label,.contact-orbit>small{font-size:9px;letter-spacing:1.5px;color:#d4e9dc;z-index:1}.orbit-core{position:relative;z-index:1;display:flex;flex-direction:column;gap:18px}.orbit-core>span{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#c1e3c7;color:#075b43;font-weight:700;font-size:24px}.orbit-core strong{font-size:clamp(35px,4vw,50px);line-height:1.03;letter-spacing:-1.8px}.orbit-dot{position:absolute;right:21%;top:34%;width:13px;height:13px;border-radius:50%;background:#c1e3c7;box-shadow:0 0 0 9px #c1e3c720}.contact-page .contact.section{background:#fffdf8;display:grid;grid-template-columns:.8fr 1fr;gap:9%;padding-top:85px;padding-bottom:90px}.contact-page .contact-copy .eyebrow{color:#08795b}.contact-page .contact-copy h2{color:#123f32}.contact-page .contact-copy h2 em{color:#08795b}.contact-page .contact-detail a,.contact-page .linkedin{color:#08795b}.contact-page .contact-form{background:#faf8f1;border:1px solid #e1e8de;border-radius:14px;padding:28px}.contact-page .contact-form input,.contact-page .contact-form select,.contact-page .contact-form textarea{border:1px solid #dce4d9;background:#fffdf8;color:#123f32;border-radius:7px}.contact-page .contact-form input:focus,.contact-page .contact-form select:focus,.contact-page .contact-form textarea:focus{outline:2px solid #83b99a;outline-offset:1px}.contact-page .submit-button{background:#006b50;color:#fff}.contact-page .form-top{color:#08795b}.contact-page .footer{background:#faf8f1}.contact-page .footer .brand-mark{background:#006b50}@media(max-width:850px){.contact-page .contact-hero{gap:5%;padding-left:6%;padding-right:6%}.contact-orbit{min-height:300px}}@media(max-width:650px){.contact-page .contact-hero,.contact-page .contact.section{grid-template-columns:1fr;gap:32px;padding:58px 7%}.contact-orbit{min-height:280px}.contact-page .contact-form{padding:21px}.contact-page .section{padding:60px 7%}}
 
 /* Black + lime theme overrides */
-.contact-page{background:#f5f3ee;color:#151614}
-.contact-page .contact-hero{background:#f5f3ee;color:#151614}
-.contact-page .contact-hero h1,.contact-page .contact-hero h2{color:#151614}
-.contact-page .contact-hero h1 em,.contact-page .contact-hero h2 em{color:#54751c}
-.contact-orbit{background:linear-gradient(145deg,#252721,#10110f)!important;color:#f5f3ee}
+.contact-page{background:#FFFFFF;color:#000000}
+.contact-page .contact-hero{background:#FFFFFF;color:#000000}
+.contact-page .contact-hero h1,.contact-page .contact-hero h2{color:#000000}
+.contact-page .contact-hero h1 em,.contact-page .contact-hero h2 em{color:#7E3BED}
+.contact-orbit{background:linear-gradient(145deg,#252721,#10110f)!important;color:#FFFFFF}
 .orbit-label,.contact-orbit>small{color:#dfe5d5}
-.orbit-core>span{background:#c5ff4a!important;color:#151614!important}
-.orbit-dot{background:#c5ff4a!important;box-shadow:0 0 0 9px #c5ff4a20!important}
-.contact-page .contact.section{background:#eeeee6!important}
-.contact-page .contact-copy .eyebrow,.contact-page .contact-copy h2 em,.contact-page .contact-detail a,.contact-page .linkedin,.contact-page .form-top{color:#54751c!important}
-.contact-page .contact-copy h2{color:#151614!important}
-.contact-page .contact-form{background:#fffefa!important;border-color:#d9dbd0!important}
-.contact-page .contact-form input,.contact-page .contact-form select,.contact-page .contact-form textarea{background:#f8f7f2!important;color:#151614!important;border-color:#d8dbcf!important}
-.contact-page .contact-form input:focus,.contact-page .contact-form select:focus,.contact-page .contact-form textarea:focus{outline:2px solid #a8d64e!important}
-.contact-page .submit-button{background:#151614!important;color:#c5ff4a!important}
-.contact-page .submit-button:hover{background:#c5ff4a!important;color:#151614!important}
-.contact-page .footer{background:#151614!important}
+.orbit-core>span{background:#C6FF34!important;color:#000000!important}
+.orbit-dot{background:#C6FF34!important;box-shadow:0 0 0 9px #C6FF3420!important}
+.contact-page .contact.section{background:#FFFFFF!important}
+.contact-page .contact-copy .eyebrow,.contact-page .contact-copy h2 em,.contact-page .contact-detail a,.contact-page .linkedin,.contact-page .form-top{color:#7E3BED!important}
+.contact-page .contact-copy h2{color:#000000!important}
+.contact-page .contact-form{background:#FFFFFF!important;border-color:#e8e3ef!important}
+.contact-page .contact-form input,.contact-page .contact-form select,.contact-page .contact-form textarea{background:#FFFFFF!important;color:#000000!important;border-color:#e8e3ef!important}
+.contact-page .contact-form input:focus,.contact-page .contact-form select:focus,.contact-page .contact-form textarea:focus{outline:2px solid #7E3BED!important}
+.contact-page .submit-button{background:#000000!important;color:#C6FF34!important}
+.contact-page .submit-button:hover{background:#C6FF34!important;color:#000000!important}
+.contact-page .footer{background:#000000!important}
 
 
 /* Brand palette override */
@@ -28,3 +28,9 @@
 .contact-page .contact-form .submit-button{background:#000!important;color:#C6FF34!important}
 .contact-page .contact-form .submit-button:hover{background:#C6FF34!important;color:#000!important}
 .contact-page .contact-detail>span{background:#f0e8ff!important;color:#7E3BED!important}
+
+/* Final palette enforcement: black, violet, white and lime only */
+:root{--ink:#000000;--violet:#7E3BED;--paper:#FFFFFF;--lime:#C6FF34;--green:#C6FF34}
+.work-page .project-tags span,.project-tags span{background:#f0e8ff!important;color:#5b2ab5!important}
+.work-page .digital-content small,.work-page .digital-content b,.work-page .project-copy>span{color:#7E3BED!important}
+.contact-page .contact-detail a,.contact-page .linkedin,.contact-page .contact-copy .eyebrow{color:#7E3BED!important}
