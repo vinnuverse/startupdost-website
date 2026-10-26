@@ -560,3 +560,83 @@ body{background:#faf8f1;color:#073f32}
 @keyframes solutionPanelIn{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:600px){.solution-tabs{display:grid;grid-template-columns:1fr;width:100%;gap:3px}.solution-tab{text-align:left;display:flex;justify-content:space-between;align-items:center}.solution-tab span{margin-left:8px}.hero-particles{opacity:.48}}
 @media(prefers-reduced-motion:reduce){.solution-panel.is-active{animation:none}.solution-tab{transition:none}}
+
+
+/* BLACK + LIME THEME — shared site palette */
+:root{
+  --ink:#151614;
+  --green:#c5ff4a;
+  --muted:#777a70;
+  --line:#30322d;
+  --paper:#f5f3ee;
+  --cream:#f5f3ee;
+  --sage:#dfe5d5;
+  --deep:#111210;
+  --accent:#c5ff4a;
+}
+html{background:#f5f3ee;color:#151614}
+body{background:#f5f3ee;color:#151614}
+::selection{background:#c5ff4a;color:#111210}
+a{color:inherit}
+.eyebrow,.section-heading .eyebrow,.section-heading p.eyebrow{color:#4e681d}
+.header,.site-header,.nav,.navigation{background:rgba(245,243,238,.94);border-color:#deded5}
+.brand-mark{background:#151614!important;color:#c5ff4a!important}
+.button.primary,.primary,.submit-button,.contact-page .submit-button,.work-page .work-cta .primary{
+  background:#151614!important;color:#c5ff4a!important;border:1px solid #151614
+}
+.button.primary:hover,.primary:hover,.submit-button:hover,.contact-page .submit-button:hover,.work-page .work-cta .primary:hover{
+  background:#c5ff4a!important;color:#151614!important;border-color:#c5ff4a
+}
+.button.secondary,.button.outline{border-color:#151614;color:#151614}
+.button.secondary:hover,.button.outline:hover{background:#151614;color:#c5ff4a}
+.hero,.hero-section{background:#f5f3ee;color:#151614}
+.hero-particles{z-index:0;opacity:.7}
+.hero-copy,.hero-art{z-index:1}
+.hero h1,.hero h2,.section h2,.section-heading h2,.hero-title{color:#151614}
+.hero h1 em,.hero h2 em,.section h2 em,.section-heading h2 em{color:#54751c}
+.solution-tabs{background:#e8e8df;border-color:#d5d7cb}
+.solution-tab{color:#55584f}
+.solution-tab span{color:#688a26}
+.solution-tab.is-active{background:#151614;color:#f5f3ee}
+.solution-tab.is-active span{color:#c5ff4a}
+.solution-panel{background:transparent}
+.card,.service-card,.solution-card,.about-service-card,.services-detail-card,.work-project,.faq-list details{
+  background:#fffefa;border-color:#deded5;color:#151614
+}
+.card p,.service-card p,.solution-card p,.about-service-card p,.services-detail-card p,.work-project p,.faq-list details p{color:#66695f}
+.card:hover,.service-card:hover,.solution-card:hover,.about-service-card:hover,.services-detail-card:hover,.work-project:hover{
+  border-color:#a6ce54;box-shadow:0 18px 42px #15161412
+}
+.service-symbol,.mission-symbol{background:#e5edcf;color:#4f6d1c}
+.project-tags span,.service-tag,.tag{background:#e8eddd;color:#3f571d}
+.faq-list details{border-bottom:1px solid #d9dacf}
+.faq-list summary{color:#151614}
+.faq-list summary span{color:#63852a}
+.contact,.contact.section,.contact-page .contact.section{background:#eeeee6;color:#151614}
+.contact-form,.contact-page .contact-form{background:#fffefa;border-color:#d9dbd0}
+.contact-form input,.contact-form select,.contact-form textarea,.contact-page .contact-form input,.contact-page .contact-form select,.contact-page .contact-form textarea{
+  background:#f8f7f2;color:#151614;border-color:#d8dbcf
+}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus,.contact-page .contact-form input:focus,.contact-page .contact-form select:focus,.contact-page .contact-form textarea:focus{
+  outline:2px solid #a8d64e;outline-offset:1px
+}
+.contact-copy h2,.contact-page .contact-copy h2{color:#151614}
+.contact-copy h2 em,.contact-page .contact-copy h2 em,.contact-page .contact-copy .eyebrow,.contact-page .contact-detail a,.contact-page .linkedin{color:#54751c}
+.contact-page .contact-form .form-top{color:#54751c}
+.contact-orbit{background:linear-gradient(145deg,#252721,#10110f);color:#f5f3ee}
+.contact-orbit .orbit-core>span{background:#c5ff4a;color:#151614}
+.contact-orbit .orbit-dot{background:#c5ff4a;box-shadow:0 0 0 9px #c5ff4a20}
+.growth-points{border-color:#d9dbd0}
+.growth-points article{border-color:#d9dbd0}
+.growth-point-icon{background:#e5edcf;color:#4f6d1c}
+.footer,.contact-page .footer{background:#151614!important;color:#f5f3ee;border-color:#30322d}
+.footer .brand,.footer p,.footer>span{color:#f5f3ee}
+.footer .brand-mark{background:#c5ff4a!important;color:#151614!important}
+.footer .brand>span:last-child{color:#c5ff4a}
+.about-hero,.services-hero,.work-hero,.about-mission,.services-process{background:#f5f3ee;color:#151614}
+.about-why,.services-cta{background:#eeeee6;color:#151614}
+.about-why-grid article,.services-steps article{border-color:#d9dbd0}
+.about-why-grid article>span,.services-steps article>span{color:#6c8b2b}
+.about-mission strong{color:#54751c}
+.work-page .work-cta{background:#e8e8df;color:#151614}
+@media(prefers-reduced-motion:reduce){.hero-particles{opacity:.25}}
