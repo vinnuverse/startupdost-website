@@ -544,3 +544,19 @@ body{background:#faf8f1;color:#073f32}
 .growth-points strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:15px;letter-spacing:-.3px;margin:1px 0 5px}
 .growth-points p{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
 @media(max-width:760px){.growth-points{grid-template-columns:1fr;padding:16px 7%}.growth-points article,.growth-points article:first-child,.growth-points article:last-child{padding:15px 0;border-right:0;border-bottom:1px solid var(--line)}.growth-points article:last-child{border-bottom:0}.growth-points p{font-size:12px}}
+
+/* ShoutnHike-inspired interactive tabs + subtle particle field, retaining StartupDost green */
+.hero{position:relative;isolation:isolate}
+.hero-particles{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.72}
+.hero-copy,.hero-art{position:relative;z-index:1}
+.solution-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:-12px 0 28px;padding:7px;background:#eeefe6;border:1px solid var(--line);border-radius:9px;width:max-content;max-width:100%}
+.solution-tab{appearance:none;border:1px solid transparent;background:transparent;color:#62675c;padding:13px 18px;border-radius:6px;font:600 12px 'DM Sans',sans-serif;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.solution-tab span{margin-left:15px;color:#78983b}
+.solution-tab:hover{transform:translateY(-1px);color:var(--ink)}
+.solution-tab.is-active{background:var(--ink);color:#fff;box-shadow:0 5px 16px #20221f16}
+.solution-tab.is-active span{color:var(--green)}
+.solution-panel[hidden]{display:none!important}
+.solution-panel.is-active{animation:solutionPanelIn .35s ease both}
+@keyframes solutionPanelIn{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.solution-tabs{display:grid;grid-template-columns:1fr;width:100%;gap:3px}.solution-tab{text-align:left;display:flex;justify-content:space-between;align-items:center}.solution-tab span{margin-left:8px}.hero-particles{opacity:.48}}
+@media(prefers-reduced-motion:reduce){.solution-panel.is-active{animation:none}.solution-tab{transition:none}}
