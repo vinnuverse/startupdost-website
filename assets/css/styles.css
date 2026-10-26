@@ -766,3 +766,43 @@ h1 em,h2 em,.section-heading h2 em,.hero h1 em,.hero h2 em{color:#7E3BED!importa
 .work-page .project-tags span,.project-tags span{background:#f0e8ff!important;color:#5b2ab5!important}
 .work-page .digital-content small,.work-page .digital-content b,.work-page .project-copy>span{color:#7E3BED!important}
 .contact-page .contact-detail a,.contact-page .linkedin,.contact-page .contact-copy .eyebrow{color:#7E3BED!important}
+
+/* FINAL BRAND OVERRIDE — exact supplied palette only */
+body,.hero,.hero-copy,.hero-art,.section,.services-hero,.services-overview,.about-hero,.about-section,.contact,.who-section,.solutions,.process-section,.faq{background-color:#FFFFFF!important;color:#000000!important}
+.hero{background:#FFFFFF!important}
+.hero-copy .eyebrow,.hero-copy .eyebrow span,.eyebrow,.section-heading .eyebrow,.service-num,.service-label,.solution-kicker,.contact-detail a,.linkedin{color:#7E3BED!important}
+.hero-copy h1,.hero-copy h2,.section-heading h2,.section h2,.section h3,.hero-copy h1 em{color:#000000!important}
+.hero-copy h1 em,.section-heading h2 em,.section h2 em,.about-copy h2 em,.contact-copy h2 em{color:#7E3BED!important}
+.hero .lead,.section-intro,.hero-copy .lead,.about-copy p,.service-card p,.solution-card p,.process-step p,.faq-list details p{color:#4c4c4c!important}
+.hero .button.primary,.button.primary,.nav-cta,.submit-button{background:#000000!important;color:#C6FF34!important;border-color:#000000!important}
+.hero .button.primary:hover,.button.primary:hover,.nav-cta:hover,.submit-button:hover{background:#C6FF34!important;color:#000000!important;border-color:#C6FF34!important}
+.hero .text-link,.text-link{color:#000000!important;border-color:#7E3BED!important}
+.hero-art .showcase-card.showcase-feature{background:#7E3BED!important;color:#FFFFFF!important}
+.hero-art .showcase-feature h3,.hero-art .showcase-feature p,.hero-art .showcase-feature .showcase-index{color:#FFFFFF!important}
+.hero-art .showcase-card.showcase-digital{background:#000000!important;color:#FFFFFF!important}
+.hero-art .showcase-digital h3,.hero-art .showcase-digital p,.hero-art .showcase-digital .showcase-index{color:#FFFFFF!important}
+.hero-art .showcase-card.showcase-growth{background:#C6FF34!important;color:#000000!important}
+.hero-art .showcase-growth h3,.hero-art .showcase-growth p,.hero-art .showcase-growth .showcase-index{color:#000000!important}
+.showcase-icon{background:rgba(255,255,255,.18)!important;color:inherit!important}
+.ticker{background:#000000!important;color:#FFFFFF!important}
+.ticker *{color:#FFFFFF!important}
+.ticker .ticker-star,.ticker .star{color:#C6FF34!important}
+.growth-points,.service-card,.solution-card,.process-step,.audience-grid article,.faq-list details,.contact-form,.services-detail-card,.work-project{background:#FFFFFF!important;color:#000000!important;border-color:#e7e0f1!important}
+.service-card h3,.solution-card h3,.process-step h3,.audience-grid h3,.faq-list summary,.services-detail-card h3,.work-project h3{color:#000000!important}
+.service-icon,.growth-point-icon,.solution-art,.contact-detail>span{background:#f0e8ff!important;color:#7E3BED!important}
+.service-card.accent-card,.services-detail-card.featured,.solution-card.solution-brand{background:#f5f0ff!important;border-color:#d9c5ff!important}
+.solution-tabs{background:#f0e8ff!important;border-color:#e1d2ff!important}
+.solution-tab{color:#000000!important}
+.solution-tab.is-active{background:#7E3BED!important;color:#FFFFFF!important}
+.solution-tab.is-active span{color:#C6FF34!important}
+.brand-advantage{background:#000000!important;color:#FFFFFF!important}
+.brand-advantage h2,.brand-advantage h3{color:#FFFFFF!important}
+.brand-advantage h2 em,.brand-advantage .eyebrow,.advantage-grid article>span{color:#C6FF34!important}
+.brand-advantage p,.advantage-grid p{color:#FFFFFF!important}
+.advantage-grid,.advantage-grid article{border-color:#39313f!important}
+.insight-cta,.contact.section,.who-section{background:#f7f3fc!important;color:#000000!important}
+.contact-form input,.contact-form select,.contact-form textarea{background:#FFFFFF!important;color:#000000!important;border-color:#d8c8f0!important}
+.footer{background:#000000!important;color:#FFFFFF!important;border-color:#282828!important}
+.footer p,.footer>span,.footer .brand{color:#FFFFFF!important}
+.footer .brand-mark{background:#C6FF34!important;color:#000000!important}
+.footer .brand>span:last-child{color:#C6FF34!important}
