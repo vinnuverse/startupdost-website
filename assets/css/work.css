@@ -20,3 +20,11 @@
 .project-copy h3{color:#151614!important}
 .project-tags span{background:#e8eddd!important;color:#3f571d!important}
 .work-disclaimer{color:#777a70!important}
+
+
+/* Brand palette override */
+.work-page .work-hero,.work-page .work-intro{background:#fff!important;color:#000!important}
+.work-page .work-hero h1 em,.work-page h2 em{color:#7E3BED!important}
+.work-page .work-cta{background:#f5f0ff!important;color:#000!important}
+.work-page .project-tags span{background:#f0e8ff!important;color:#5b2ab5!important}
+.work-page .work-cta .button{background:#000!important;color:#C6FF34!important}
