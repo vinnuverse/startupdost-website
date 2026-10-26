@@ -926,3 +926,12 @@ h1 em,h2 em,.hero h1 em,.hero h2 em,.section-heading h2 em{color:#7E3BED!importa
  }
 }
 @media(max-width:650px),(prefers-reduced-motion:reduce){.sd-cursor,.sd-cursor-ring{display:none!important}}
+
+/* Single-ring cursor: no second orbit or planet */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .sd-cursor{display:none!important}
+ .sd-cursor-ring{width:36px!important;height:36px!important;border:1.5px solid #7E3BED!important;border-radius:50%!important;background:transparent!important;box-shadow:none!important}
+ .sd-cursor-ring:before,.sd-cursor-ring:after{display:none!important;content:none!important}
+ body.cursor-hover .sd-cursor-ring{width:44px!important;height:44px!important;border-color:#C6FF34!important}
+}
+@media(max-width:650px),(prefers-reduced-motion:reduce){.sd-cursor,.sd-cursor-ring{display:none!important}}
