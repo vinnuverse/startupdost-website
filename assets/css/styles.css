@@ -534,3 +534,13 @@ body{background:#faf8f1;color:#073f32}
    to{transform:scaleY(1.4) rotate(360deg)}
  }
 }
+
+/* Conversion-focused benefits strip inspired by modern performance-agency layouts */
+.growth-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:27px 9%;background:#fffdf8;border-bottom:1px solid var(--line)}
+.growth-points article{display:flex;align-items:flex-start;gap:14px;padding:10px 24px;border-right:1px solid var(--line)}
+.growth-points article:first-child{padding-left:0}
+.growth-points article:last-child{border-right:0;padding-right:0}
+.growth-point-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:50%;background:#e8efda;color:#58772d;font-size:21px}
+.growth-points strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:15px;letter-spacing:-.3px;margin:1px 0 5px}
+.growth-points p{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
+@media(max-width:760px){.growth-points{grid-template-columns:1fr;padding:16px 7%}.growth-points article,.growth-points article:first-child,.growth-points article:last-child{padding:15px 0;border-right:0;border-bottom:1px solid var(--line)}.growth-points article:last-child{border-bottom:0}.growth-points p{font-size:12px}}
