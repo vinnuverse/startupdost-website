@@ -500,16 +500,45 @@ body{background:#faf8f1;color:#073f32}
 }
 
 
-/* Axial spin: Jupiter rotates around its own axis; orbital ring stays fixed */
+/* Jupiter spins on its axis while both orbital rings keep moving */
 @media (pointer:fine) and (prefers-reduced-motion:no-preference){
- .sd-cursor-ring{animation:none!important}
- .sd-cursor-ring:before{animation:none!important}
  .sd-cursor:before{
    transform-origin:center!important;
    animation:sdJupiterAxialSpin 3.5s linear infinite!important;
  }
+ .sd-cursor-ring{
+   transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)!important;
+   animation:sdRingOrbit 7s linear infinite!important;
+ }
+ .sd-cursor-ring:before{
+   transform-origin:center!important;
+   animation:sdDashedOrbit 5s linear infinite!important;
+ }
+ .sd-cursor-ring:after{
+   content:"";
+   position:absolute;
+   inset:-7px -3px;
+   border:1.5px solid rgba(183,143,99,.9);
+   border-radius:50%;
+   transform:scaleY(1.4);
+   pointer-events:none;
+   animation:sdSecondRingSpin 8s linear infinite!important;
+ }
  @keyframes sdJupiterAxialSpin{
    from{transform:rotateY(0deg)}
    to{transform:rotateY(360deg)}
+ }
+ @keyframes sdRingOrbit{
+   0%{transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)}
+   50%{transform:translate(-50%,-50%) rotate(62deg) scaleY(.34)}
+   100%{transform:translate(-50%,-50%) rotate(152deg) scaleY(.34)}
+ }
+ @keyframes sdDashedOrbit{
+   from{transform:scaleY(1.4) rotate(0deg)}
+   to{transform:scaleY(1.4) rotate(360deg)}
+ }
+ @keyframes sdSecondRingSpin{
+   from{transform:scaleY(1.4) rotate(360deg)}
+   to{transform:scaleY(1.4) rotate(0deg)}
  }
 }
