@@ -500,16 +500,16 @@ body{background:#faf8f1;color:#073f32}
 }
 
 
-/* Keep Jupiter still; both orbital rings continue rotating */
+/* Keep Jupiter still; both rings orbit clockwise */
 @media (pointer:fine) and (prefers-reduced-motion:no-preference){
  .sd-cursor:before{animation:none!important;transform:none!important}
  .sd-cursor-ring{
    transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)!important;
-   animation:sdRingOrbit 7s linear infinite!important;
+   animation:sdRingOrbitClockwise 7s linear infinite!important;
  }
  .sd-cursor-ring:before{
    transform-origin:center!important;
-   animation:sdDashedOrbit 5s linear infinite!important;
+   animation:sdDashedOrbitClockwise 5s linear infinite!important;
  }
  .sd-cursor-ring:after{
    content:"";
@@ -519,19 +519,18 @@ body{background:#faf8f1;color:#073f32}
    border-radius:50%;
    transform:scaleY(1.4);
    pointer-events:none;
-   animation:sdSecondRingSpin 8s linear infinite!important;
+   animation:sdSecondRingClockwise 8s linear infinite!important;
  }
- @keyframes sdRingOrbit{
-   0%{transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)}
-   50%{transform:translate(-50%,-50%) rotate(62deg) scaleY(.34)}
-   100%{transform:translate(-50%,-50%) rotate(152deg) scaleY(.34)}
+ @keyframes sdRingOrbitClockwise{
+   from{transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)}
+   to{transform:translate(-50%,-50%) rotate(332deg) scaleY(.34)}
  }
- @keyframes sdDashedOrbit{
+ @keyframes sdDashedOrbitClockwise{
    from{transform:scaleY(1.4) rotate(0deg)}
    to{transform:scaleY(1.4) rotate(360deg)}
  }
- @keyframes sdSecondRingSpin{
-   from{transform:scaleY(1.4) rotate(360deg)}
-   to{transform:scaleY(1.4) rotate(0deg)}
+ @keyframes sdSecondRingClockwise{
+   from{transform:scaleY(1.4) rotate(0deg)}
+   to{transform:scaleY(1.4) rotate(360deg)}
  }
 }
