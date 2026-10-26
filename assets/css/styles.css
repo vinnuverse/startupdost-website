@@ -500,12 +500,9 @@ body{background:#faf8f1;color:#073f32}
 }
 
 
-/* Jupiter spins on its axis while both orbital rings keep moving */
+/* Keep Jupiter still; both orbital rings continue rotating */
 @media (pointer:fine) and (prefers-reduced-motion:no-preference){
- .sd-cursor:before{
-   transform-origin:center!important;
-   animation:sdJupiterAxialSpin 3.5s linear infinite!important;
- }
+ .sd-cursor:before{animation:none!important;transform:none!important}
  .sd-cursor-ring{
    transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)!important;
    animation:sdRingOrbit 7s linear infinite!important;
@@ -523,10 +520,6 @@ body{background:#faf8f1;color:#073f32}
    transform:scaleY(1.4);
    pointer-events:none;
    animation:sdSecondRingSpin 8s linear infinite!important;
- }
- @keyframes sdJupiterAxialSpin{
-   from{transform:rotateY(0deg)}
-   to{transform:rotateY(360deg)}
  }
  @keyframes sdRingOrbit{
    0%{transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)}
