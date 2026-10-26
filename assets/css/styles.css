@@ -809,3 +809,30 @@ body,.hero,.hero-copy,.hero-art,.section,.services-hero,.services-overview,.abou
 
 /* FINAL SAGE-GREEN REMOVAL: brand palette enforced */
 :root{--ink:#000000;--violet:#7E3BED;--paper:#FFFFFF;--lime:#C6FF34;--green:#C6FF34}
+
+/* STARTUPDOST PLANET CURSOR — visible, smooth and aligned to the violet/lime palette */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ body,a,button,select,input,textarea{cursor:none!important}
+ .sd-cursor{
+  width:24px!important;height:24px!important;border-radius:50%!important;
+  background:radial-gradient(circle at 30% 24%,#fff 0 5%,transparent 18%),repeating-linear-gradient(165deg,#C6FF34 0 3px,#7E3BED 3px 6px,#C6FF34 6px 8px,#000 8px 10px)!important;
+  border:1.5px solid #000!important;box-shadow:0 0 0 2px #C6FF34,0 2px 9px #0005!important;
+  mix-blend-mode:normal!important;z-index:10001!important;
+ }
+ .sd-cursor-ring{
+  width:48px!important;height:48px!important;border:1px solid #7E3BED!important;
+  box-shadow:0 0 0 2px #C6FF3426!important;background:transparent!important;
+  z-index:10000!important;
+ }
+ .sd-cursor-ring:before,.sd-cursor-ring:after{
+  content:"";position:absolute;left:50%;top:50%;width:56px;height:23px;
+  border:1.5px solid #C6FF34;border-radius:50%;transform:translate(-50%,-50%) rotate(-28deg);
+ }
+ .sd-cursor-ring:after{width:62px;height:29px;border-color:#7E3BED;transform:translate(-50%,-50%) rotate(34deg)}
+ body.cursor-hover .sd-cursor{width:28px!important;height:28px!important}
+ body.cursor-hover .sd-cursor-ring{width:58px!important;height:58px!important;background:transparent!important;border-color:#C6FF34!important}
+}
+@media(max-width:650px),(prefers-reduced-motion:reduce){
+ body,a,button,select,input,textarea{cursor:auto!important}
+ .sd-cursor,.sd-cursor-ring{display:none!important}
+}
