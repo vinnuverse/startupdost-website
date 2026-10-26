@@ -34,3 +34,14 @@
 .work-page .project-tags span,.project-tags span{background:#f0e8ff!important;color:#5b2ab5!important}
 .work-page .digital-content small,.work-page .digital-content b,.work-page .project-copy>span{color:#7E3BED!important}
 .contact-page .contact-detail a,.contact-page .linkedin,.contact-page .contact-copy .eyebrow{color:#7E3BED!important}
+
+/* Final brand palette */
+.work-page,.work-page .work-hero,.work-page .work-intro,.work-page .section{background:#FFFFFF!important;color:#000000!important}
+.work-page h1,.work-page h2,.work-page h3,.work-page .project-copy h3{color:#000000!important}
+.work-page h1 em,.work-page h2 em,.work-page .project-copy>span,.work-page .digital-content small,.work-page .digital-content b{color:#7E3BED!important}
+.work-page .brand-concept,.work-page .growth-concept{background:#000000!important;color:#FFFFFF!important}
+.work-page .brand-concept strong em,.work-page .brand-concept i,.work-page .growth-concept>strong em,.work-page .growth-chart i{color:#C6FF34!important;background-color:#C6FF34!important}
+.work-page .digital-concept{background:#f5f0ff!important;color:#000000!important}
+.work-page .project-tags span{background:#f0e8ff!important;color:#5b2ab5!important}
+.work-page .work-cta{background:#f5f0ff!important;color:#000000!important}
+.work-page .work-cta .button{background:#000000!important;color:#C6FF34!important}
