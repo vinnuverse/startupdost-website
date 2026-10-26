@@ -836,3 +836,75 @@ body,.hero,.hero-copy,.hero-art,.section,.services-hero,.services-overview,.abou
  body,a,button,select,input,textarea{cursor:auto!important}
  .sd-cursor,.sd-cursor-ring{display:none!important}
 }
+
+/* STARTUPDOST FINAL LIGHT THEME — white canvas, black type, violet + lime accents */
+:root{color-scheme:light;--ink:#000000;--violet:#7E3BED;--paper:#FFFFFF;--lime:#C6FF34;--green:#C6FF34}
+html,body{background:#FFFFFF!important;color:#000000!important}
+body{color-scheme:light}
+.site-header,.header,.nav-wrap{background:rgba(255,255,255,.96)!important;color:#000000!important;border-color:#eee8f7!important}
+.site-header a,.header a,.brand,.site-header nav a{color:#000000!important}
+.site-header nav a:hover,.site-header nav a.active{color:#7E3BED!important}
+.brand>span:last-child{color:#7E3BED!important}
+h1,h2,h3,h4,h5,p,li,label,summary{ text-shadow:none }
+h1,h2,h3,h4,.hero h1,.hero h2,.section-heading h2{color:#000000!important}
+h1 em,h2 em,.hero h1 em,.hero h2 em,.section-heading h2 em{color:#7E3BED!important}
+.eyebrow,.section-heading .eyebrow,.service-num,.service-label,.solution-kicker{color:#7E3BED!important}
+.hero,.hero-copy,.hero-art,.section,.about-hero,.services-hero,.contact-hero,.work-hero,.work-intro,.services-overview,.who-section,.solutions,.process-section,.faq,.contact{background:#FFFFFF!important;color:#000000!important}
+.hero .lead,.hero-copy .lead,.section-intro,.about-copy p,.service-card p,.solution-card p,.process-step p,.faq-list details p{color:#55515c!important}
+.button.primary,.primary,.nav-cta,.submit-button,.hero .button.primary{background:#C6FF34!important;color:#000000!important;border:1px solid #C6FF34!important}
+.button.primary:hover,.primary:hover,.nav-cta:hover,.submit-button:hover{background:#000000!important;color:#C6FF34!important;border-color:#000000!important}
+.button.secondary{background:#FFFFFF!important;color:#000000!important;border-color:#000000!important}
+.button.secondary:hover{background:#7E3BED!important;color:#FFFFFF!important;border-color:#7E3BED!important}
+.text-link,.hero .text-link{color:#000000!important;border-color:#7E3BED!important}
+.service-card,.solution-card,.process-step,.audience-grid article,.faq-list details,.contact-form,.services-detail-card,.work-project,.growth-points{background:#FFFFFF!important;color:#000000!important;border:1px solid #e8e1f2!important;box-shadow:none!important}
+.service-card h3,.solution-card h3,.process-step h3,.audience-grid h3,.faq-list summary,.services-detail-card h3,.work-project h3{color:#000000!important}
+.service-icon,.growth-point-icon,.solution-art,.contact-detail>span{background:#f1e9ff!important;color:#7E3BED!important}
+.service-card.accent-card,.services-detail-card.featured,.solution-card.solution-brand{background:#f6f1ff!important;border-color:#d9c5ff!important}
+.solution-tabs{background:#f6f1ff!important;border-color:#e7dcfa!important}
+.solution-tab{color:#000000!important}
+.solution-tab.is-active{background:#7E3BED!important;color:#FFFFFF!important}
+.solution-tab.is-active span{color:#C6FF34!important}
+.brand-advantage{background:#FFFFFF!important;color:#000000!important}
+.brand-advantage h2,.brand-advantage h3{color:#000000!important}
+.brand-advantage h2 em,.brand-advantage .eyebrow,.advantage-grid article>span{color:#7E3BED!important}
+.brand-advantage p,.advantage-grid p{color:#55515c!important}
+.advantage-grid,.advantage-grid article{border-color:#e8e1f2!important}
+.insight-cta,.contact.section,.who-section,.services-process{background:#f8f5fc!important;color:#000000!important}
+.contact-form input,.contact-form select,.contact-form textarea{background:#FFFFFF!important;color:#000000!important;border-color:#ded3ef!important}
+.footer,.contact-page .footer{background:#000000!important;color:#FFFFFF!important;border-color:#000000!important}
+.footer p,.footer>span,.footer .brand{color:#FFFFFF!important}
+.footer .brand-mark{background:#C6FF34!important;color:#000000!important}
+.footer .brand>span:last-child{color:#C6FF34!important}
+.ticker{background:#7E3BED!important;color:#FFFFFF!important}
+.ticker *{color:#FFFFFF!important}
+.ticker .ticker-star,.ticker .star{color:#C6FF34!important}
+.showcase-feature{background:#7E3BED!important;color:#FFFFFF!important}
+.showcase-feature h3,.showcase-feature p,.showcase-feature .showcase-index{color:#FFFFFF!important}
+.showcase-digital{background:#000000!important;color:#FFFFFF!important}
+.showcase-digital h3,.showcase-digital p,.showcase-digital .showcase-index{color:#FFFFFF!important}
+.showcase-growth{background:#C6FF34!important;color:#000000!important}
+.showcase-growth h3,.showcase-growth p,.showcase-growth .showcase-index{color:#000000!important}
+.showcase-icon{background:rgba(255,255,255,.18)!important;color:inherit!important}
+.project-tags span,.service-tag,.tag{background:#f1e9ff!important;color:#5b2ab5!important}
+.work-page,.work-page .work-hero,.work-page .work-intro,.work-page .section{background:#FFFFFF!important;color:#000000!important}
+.work-page h1,.work-page h2,.work-page h3{color:#000000!important}
+.work-page h1 em,.work-page h2 em,.work-page .project-copy>span{color:#7E3BED!important}
+.work-page .work-cta{background:#f6f1ff!important;color:#000000!important}
+.work-page .work-cta .button{background:#C6FF34!important;color:#000000!important}
+.contact-page,.contact-page .contact-hero,.contact-page .contact.section{background:#FFFFFF!important;color:#000000!important}
+.contact-page h1,.contact-page h2,.contact-page h3{color:#000000!important}
+.contact-page h1 em,.contact-page h2 em,.contact-page .contact-copy .eyebrow,.contact-page .contact-detail a,.contact-page .linkedin,.contact-page .form-top{color:#7E3BED!important}
+.contact-page .contact-form{background:#FFFFFF!important;border-color:#e8e1f2!important}
+.contact-page .contact-form input,.contact-page .contact-form select,.contact-page .contact-form textarea{background:#FFFFFF!important;color:#000000!important;border-color:#ded3ef!important}
+.contact-page .contact-form .submit-button{background:#C6FF34!important;color:#000000!important}
+.contact-page .contact-detail>span{background:#f1e9ff!important;color:#7E3BED!important}
+/* Ring-only custom cursor: no planet, globe, moon or filled cursor dot */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ body,a,button,select,input,textarea{cursor:none!important}
+ .sd-cursor{display:none!important}
+ .sd-cursor-ring{width:40px!important;height:40px!important;background:transparent!important;border:1px solid #7E3BED!important;box-shadow:0 0 0 1px #C6FF3440!important}
+ .sd-cursor-ring:before,.sd-cursor-ring:after{content:"";position:absolute;left:50%;top:50%;width:52px;height:22px;border:1px solid #C6FF34;border-radius:50%;background:transparent;transform:translate(-50%,-50%) rotate(-30deg)}
+ .sd-cursor-ring:after{width:58px;height:27px;border-color:#7E3BED;transform:translate(-50%,-50%) rotate(32deg)}
+ body.cursor-hover .sd-cursor-ring{width:52px!important;height:52px!important;border-color:#C6FF34!important}
+}
+@media(max-width:650px),(prefers-reduced-motion:reduce){body,a,button,select,input,textarea{cursor:auto!important}.sd-cursor,.sd-cursor-ring{display:none!important}}
