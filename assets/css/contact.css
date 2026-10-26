@@ -34,3 +34,14 @@
 .work-page .project-tags span,.project-tags span{background:#f0e8ff!important;color:#5b2ab5!important}
 .work-page .digital-content small,.work-page .digital-content b,.work-page .project-copy>span{color:#7E3BED!important}
 .contact-page .contact-detail a,.contact-page .linkedin,.contact-page .contact-copy .eyebrow{color:#7E3BED!important}
+
+/* Final brand palette */
+.contact-page,.contact-page .contact-hero,.contact-page .contact.section{background:#FFFFFF!important;color:#000000!important}
+.contact-page h1,.contact-page h2,.contact-page h3{color:#000000!important}
+.contact-page h1 em,.contact-page h2 em,.contact-page .contact-copy .eyebrow,.contact-page .contact-detail a,.contact-page .linkedin,.contact-page .form-top{color:#7E3BED!important}
+.contact-page .contact-form{background:#FFFFFF!important;border-color:#e8e3ef!important}
+.contact-page .contact-form input,.contact-page .contact-form select,.contact-page .contact-form textarea{background:#FFFFFF!important;color:#000000!important;border-color:#d8c8f0!important}
+.contact-page .contact-form .submit-button{background:#000000!important;color:#C6FF34!important}
+.contact-page .contact-form .submit-button:hover{background:#C6FF34!important;color:#000000!important}
+.contact-page .contact-detail>span{background:#f0e8ff!important;color:#7E3BED!important}
+.contact-page .footer{background:#000000!important}
