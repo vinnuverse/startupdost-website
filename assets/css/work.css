@@ -56,3 +56,11 @@
 .work-page .project-tags span{background:#f1e9ff!important;color:#5b2ab5!important}
 .work-page .work-cta{background:#f6f1ff!important;color:#000000!important}
 .work-page .work-cta .button{background:#C6FF34!important;color:#000000!important}
+
+/* Restore original forest-green, sage, blush and warm-white theme */
+.work-page,.work-page .work-hero,.work-page .work-intro,.work-page .section{background:#FAF8F2!important;color:#173E2B!important}
+.work-page h1,.work-page h2,.work-page h3{color:#173E2B!important}
+.work-page h1 em,.work-page h2 em,.work-page .project-copy>span{color:#245B3B!important}
+.work-page .project-tags span{background:#DCE6D8!important;color:#245B3B!important}
+.work-page .work-cta{background:#F4DDE1!important;color:#173E2B!important}
+.work-page .work-cta .button{background:#245B3B!important;color:#FFFFFF!important}
