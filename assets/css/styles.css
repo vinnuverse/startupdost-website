@@ -1010,3 +1010,80 @@ h1 em,h2 em,.hero h1 em,.hero h2 em,.section-heading h2 em{color:#245B3B!importa
  .sd-cursor-ring{display:none!important}
  body.cursor-hover .sd-cursor{background:#F4DDE1!important;box-shadow:0 0 0 1px #245B3B!important}
 }
+
+
+/* FINAL VISUAL QA FIX — consistent StartupDost green/sage/blush theme */
+:root{
+  color-scheme:light;
+  --ink:#173E2B;
+  --green:#245B3B;
+  --paper:#FAF8F2;
+  --sage:#DCE6D8;
+  --blush:#F4DDE1;
+  --accent:#245B3B;
+}
+html,body{background:#FAF8F2!important;color:#173E2B!important}
+body{color-scheme:light}
+.site-header,.site-header nav,.nav-wrap{background:rgba(250,248,242,.97)!important;color:#173E2B!important;border-color:#DCE6D8!important}
+.site-header a,.site-header nav a,.brand{color:#173E2B!important}
+.site-header nav a:hover,.site-header nav a.active,.brand>span:last-child{color:#245B3B!important}
+.brand-mark{background:#245B3B!important;color:#FFFFFF!important}
+h1,h2,h3,h4,.hero h1,.hero h2,.section-heading h2{color:#173E2B!important}
+h1 em,h2 em,.hero h1 em,.hero h2 em,.section-heading h2 em{color:#087F5B!important}
+.eyebrow,.section-heading .eyebrow,.service-num,.service-label,.solution-kicker{color:#245B3B!important}
+.hero,.hero-copy,.hero-art,.section,.about-hero,.services-hero,.contact-hero,.work-hero,.work-intro,.services-overview,.who-section,.solutions,.process-section,.faq,.contact{background:#FAF8F2!important;color:#173E2B!important}
+.hero .lead,.hero-copy .lead,.section-intro,.about-copy p,.service-card p,.solution-card p,.process-step p,.faq-list details p{color:#536257!important}
+.button.primary,.primary,.nav-cta,.submit-button,.hero .button.primary{background:#245B3B!important;color:#FFFFFF!important;border:1px solid #245B3B!important}
+.button.primary:hover,.primary:hover,.nav-cta:hover,.submit-button:hover{background:#173E2B!important;color:#FFFFFF!important;border-color:#173E2B!important}
+.text-link,.hero .text-link{color:#173E2B!important;border-color:#B9CCB8!important}
+.service-card,.solution-card,.process-step,.audience-grid article,.faq-list details,.contact-form,.services-detail-card,.work-project,.growth-points{background:#FFFFFF!important;color:#173E2B!important;border:1px solid #DCE6D8!important;box-shadow:none!important}
+.service-card h3,.solution-card h3,.process-step h3,.audience-grid h3,.faq-list summary,.services-detail-card h3,.work-project h3{color:#173E2B!important}
+.service-icon,.growth-point-icon,.contact-detail>span,.service-symbol{background:#DCE6D8!important;color:#245B3B!important}
+.service-card.accent-card,.services-detail-card.featured,.solution-card.solution-brand{background:#F4DDE1!important;border-color:#EBCBD2!important}
+.service-card a,.services-detail-card a,.solution-copy a,.audience-grid article a{
+  display:inline-flex!important;align-items:center;gap:8px;
+  width:fit-content!important;max-width:100%;
+  padding:0!important;margin-top:18px;
+  background:transparent!important;color:#245B3B!important;
+  border:0!important;border-radius:0!important;
+  box-shadow:none!important;text-decoration:none!important;
+  font-weight:700!important;line-height:1.5!important;
+}
+.service-card a span,.services-detail-card a span,.solution-copy a span{color:#245B3B!important}
+.service-card a:hover,.services-detail-card a:hover,.solution-copy a:hover,.audience-grid article a:hover{
+  background:transparent!important;color:#087F5B!important;text-decoration:underline!important;text-underline-offset:4px;
+}
+.service-card a:focus-visible,.services-detail-card a:focus-visible,.solution-copy a:focus-visible{outline:2px solid #245B3B!important;outline-offset:4px}
+.solution-tabs{background:#DCE6D8!important;border-color:#DCE6D8!important}
+.solution-tab{color:#173E2B!important}
+.solution-tab.is-active{background:#245B3B!important;color:#FFFFFF!important}
+.solution-tab.is-active span{color:#F4DDE1!important}
+.brand-advantage{background:#DCE6D8!important;color:#173E2B!important}
+.brand-advantage h2,.brand-advantage h3,.brand-advantage .section-heading h2{color:#173E2B!important}
+.brand-advantage h2 em,.brand-advantage .section-heading h2 em{color:#245B3B!important}
+.brand-advantage .eyebrow,.advantage-grid article>span{color:#245B3B!important}
+.brand-advantage .section-intro,.brand-advantage p,.advantage-grid p{color:#46574A!important}
+.advantage-grid,.advantage-grid article{border-color:#B9CCB8!important}
+.insight-cta,.contact.section,.who-section,.services-process{background:#F4DDE1!important;color:#173E2B!important}
+.contact-form input,.contact-form select,.contact-form textarea{background:#FFFFFF!important;color:#173E2B!important;border-color:#DCE6D8!important}
+.footer,.contact-page .footer{background:#173E2B!important;color:#FAF8F2!important;border-color:#173E2B!important}
+.footer p,.footer>span,.footer .brand{color:#FAF8F2!important}
+.footer .brand-mark{background:#F4DDE1!important;color:#173E2B!important}
+.footer .brand>span:last-child{color:#F4DDE1!important}
+.ticker{background:#245B3B!important;color:#FFFFFF!important}
+.ticker *{color:#FFFFFF!important}
+.ticker .ticker-star,.ticker .star{color:#F4DDE1!important}
+.showcase-feature{background:#DCE6D8!important;color:#173E2B!important}
+.showcase-feature h3,.showcase-feature p,.showcase-feature .showcase-index{color:#173E2B!important}
+.showcase-digital{background:#245B3B!important;color:#FFFFFF!important}
+.showcase-digital h3,.showcase-digital p,.showcase-digital .showcase-index{color:#FFFFFF!important}
+.showcase-growth{background:#F4DDE1!important;color:#173E2B!important}
+.showcase-growth h3,.showcase-growth p,.showcase-growth .showcase-index{color:#173E2B!important}
+.showcase-icon{background:rgba(255,255,255,.35)!important;color:inherit!important}
+.project-tags span,.service-tag,.tag{background:#DCE6D8!important;color:#245B3B!important}
+.brand-advantage .advantage-grid article{background:transparent!important}
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .sd-cursor{display:block!important;width:8px!important;height:8px!important;border-radius:50%!important;background:#245B3B!important;border:1px solid #FAF8F2!important;box-shadow:0 0 0 1px #245B3B!important}
+ .sd-cursor-ring{display:none!important}
+ body.cursor-hover .sd-cursor{background:#F4DDE1!important;box-shadow:0 0 0 1px #245B3B!important}
+}
