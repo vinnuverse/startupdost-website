@@ -1087,3 +1087,16 @@ h1 em,h2 em,.hero h1 em,.hero h2 em,.section-heading h2 em{color:#087F5B!importa
  .sd-cursor-ring{display:none!important}
  body.cursor-hover .sd-cursor{background:#F4DDE1!important;box-shadow:0 0 0 1px #245B3B!important}
 }
+
+
+/* Active capability tab is a single feature, not an empty three-column grid */
+.solutions-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;max-width:1120px!important;margin-right:auto!important}
+.solution-card.solution-panel.is-active{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+.solution-card.solution-panel[hidden]{display:none!important}
+.solution-card .solution-art{height:100%!important;min-height:300px!important}
+.solution-card .solution-copy{align-self:center!important;padding:clamp(24px,4vw,48px)!important}
+@media(max-width:700px){
+ .solution-card.solution-panel.is-active{display:block!important}
+ .solution-card .solution-art{height:240px!important;min-height:0!important}
+ .solution-card .solution-copy{padding:22px!important}
+}
