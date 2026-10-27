@@ -64,3 +64,19 @@
 .work-page .project-tags span{background:#DCE6D8!important;color:#245B3B!important}
 .work-page .work-cta{background:#F4DDE1!important;color:#173E2B!important}
 .work-page .work-cta .button{background:#245B3B!important;color:#FFFFFF!important}
+
+
+/* Final work-page spacing and readable concept cards */
+.work-page .work-projects{background:#FAF8F2!important}
+.work-page .project-visual{background:#DCE6D8!important}
+.work-page .work-project-brand .project-visual{background:#DCE6D8!important}
+.work-page .work-project-digital .project-visual{background:#F4DDE1!important}
+.work-page .work-project-growth .project-visual{background:#DCE6D8!important}
+.work-page .brand-concept strong em,.work-page .digital-content strong em{color:#245B3B!important}
+.work-page .digital-content small,.work-page .digital-content b,.work-page .project-copy>span{color:#245B3B!important}
+.work-page .digital-content p,.work-page .work-intro>p,.work-page .work-cta>div>p:last-child{color:#536257!important}
+.work-page .growth-concept{background:#245B3B!important;color:#FFFFFF!important}
+.work-page .growth-concept>strong em{color:#F4DDE1!important}
+.work-page .work-cta{background:#F4DDE1!important;color:#173E2B!important}
+.work-page .work-cta .button{background:#245B3B!important;color:#FFFFFF!important}
+@media(max-width:760px){.work-page .work-project-grid{grid-template-columns:1fr!important}.work-page .work-project:last-child{grid-column:auto!important;display:block!important}}
