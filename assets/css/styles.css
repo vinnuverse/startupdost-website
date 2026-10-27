@@ -944,3 +944,69 @@ h1 em,h2 em,.hero h1 em,.hero h2 em,.section-heading h2 em{color:#7E3BED!importa
  body.cursor-hover .sd-cursor{width:10px!important;height:10px!important;background:#C6FF34!important;box-shadow:0 0 0 1px #000000!important}
 }
 @media(max-width:650px),(prefers-reduced-motion:reduce){body,a,button,select,input,textarea{cursor:auto!important}.sd-cursor,.sd-cursor-ring{display:none!important}}
+
+/* RESTORE ORIGINAL STARTUPDOST THEME: royal/forest green, sage, blush pink, warm white */
+:root{color-scheme:light;--ink:#173E2B;--green:#245B3B;--paper:#FAF8F2;--sage:#DCE6D8;--blush:#F4DDE1;--accent:#245B3B}
+html,body{background:#FAF8F2!important;color:#173E2B!important}
+body{color-scheme:light}
+.site-header,.header,.nav-wrap{background:rgba(250,248,242,.96)!important;color:#173E2B!important;border-color:#DCE6D8!important}
+.site-header a,.header a,.brand,.site-header nav a{color:#173E2B!important}
+.site-header nav a:hover,.site-header nav a.active,.eyebrow,.section-heading .eyebrow,.service-num,.service-label,.solution-kicker{color:#245B3B!important}
+.brand>span:last-child{color:#245B3B!important}
+h1,h2,h3,h4,.hero h1,.hero h2,.section-heading h2{color:#173E2B!important}
+h1 em,h2 em,.hero h1 em,.hero h2 em,.section-heading h2 em{color:#245B3B!important}
+.hero,.hero-copy,.hero-art,.section,.about-hero,.services-hero,.contact-hero,.work-hero,.work-intro,.services-overview,.who-section,.solutions,.process-section,.faq,.contact{background:#FAF8F2!important;color:#173E2B!important}
+.hero .lead,.hero-copy .lead,.section-intro,.about-copy p,.service-card p,.solution-card p,.process-step p,.faq-list details p{color:#5F685F!important}
+.button.primary,.primary,.nav-cta,.submit-button,.hero .button.primary{background:#245B3B!important;color:#FAF8F2!important;border:1px solid #245B3B!important}
+.button.primary:hover,.primary:hover,.nav-cta:hover,.submit-button:hover{background:#173E2B!important;color:#FFFFFF!important;border-color:#173E2B!important}
+.button.secondary{background:transparent!important;color:#173E2B!important;border-color:#245B3B!important}
+.button.secondary:hover{background:#F4DDE1!important;color:#173E2B!important;border-color:#F4DDE1!important}
+.text-link,.hero .text-link{color:#173E2B!important;border-color:#245B3B!important}
+.service-card,.solution-card,.process-step,.audience-grid article,.faq-list details,.contact-form,.services-detail-card,.work-project,.growth-points{background:#FFFFFF!important;color:#173E2B!important;border:1px solid #DCE6D8!important;box-shadow:none!important}
+.service-card h3,.solution-card h3,.process-step h3,.audience-grid h3,.faq-list summary,.services-detail-card h3,.work-project h3{color:#173E2B!important}
+.service-icon,.growth-point-icon,.solution-art,.contact-detail>span{background:#DCE6D8!important;color:#245B3B!important}
+.service-card.accent-card,.services-detail-card.featured,.solution-card.solution-brand{background:#F4DDE1!important;border-color:#EBCBD2!important}
+.solution-tabs{background:#DCE6D8!important;border-color:#DCE6D8!important}
+.solution-tab{color:#173E2B!important}
+.solution-tab.is-active{background:#245B3B!important;color:#FFFFFF!important}
+.solution-tab.is-active span{color:#F4DDE1!important}
+.brand-advantage{background:#DCE6D8!important;color:#173E2B!important}
+.brand-advantage h2,.brand-advantage h3{color:#173E2B!important}
+.brand-advantage h2 em,.brand-advantage .eyebrow,.advantage-grid article>span{color:#245B3B!important}
+.brand-advantage p,.advantage-grid p{color:#46574A!important}
+.advantage-grid,.advantage-grid article{border-color:#B9CCB8!important}
+.insight-cta,.contact.section,.who-section,.services-process{background:#F4DDE1!important;color:#173E2B!important}
+.contact-form input,.contact-form select,.contact-form textarea{background:#FFFFFF!important;color:#173E2B!important;border-color:#DCE6D8!important}
+.footer,.contact-page .footer{background:#173E2B!important;color:#FAF8F2!important;border-color:#173E2B!important}
+.footer p,.footer>span,.footer .brand{color:#FAF8F2!important}
+.footer .brand-mark{background:#F4DDE1!important;color:#173E2B!important}
+.footer .brand>span:last-child{color:#F4DDE1!important}
+.ticker{background:#245B3B!important;color:#FFFFFF!important}
+.ticker *{color:#FFFFFF!important}
+.ticker .ticker-star,.ticker .star{color:#F4DDE1!important}
+.showcase-feature{background:#DCE6D8!important;color:#173E2B!important}
+.showcase-feature h3,.showcase-feature p,.showcase-feature .showcase-index{color:#173E2B!important}
+.showcase-digital{background:#245B3B!important;color:#FFFFFF!important}
+.showcase-digital h3,.showcase-digital p,.showcase-digital .showcase-index{color:#FFFFFF!important}
+.showcase-growth{background:#F4DDE1!important;color:#173E2B!important}
+.showcase-growth h3,.showcase-growth p,.showcase-growth .showcase-index{color:#173E2B!important}
+.showcase-icon{background:rgba(255,255,255,.35)!important;color:inherit!important}
+.project-tags span,.service-tag,.tag{background:#DCE6D8!important;color:#245B3B!important}
+.work-page,.work-page .work-hero,.work-page .work-intro,.work-page .section{background:#FAF8F2!important;color:#173E2B!important}
+.work-page h1,.work-page h2,.work-page h3{color:#173E2B!important}
+.work-page h1 em,.work-page h2 em,.work-page .project-copy>span{color:#245B3B!important}
+.work-page .work-cta{background:#F4DDE1!important;color:#173E2B!important}
+.work-page .work-cta .button{background:#245B3B!important;color:#FAF8F2!important}
+.contact-page,.contact-page .contact-hero,.contact-page .contact.section{background:#FAF8F2!important;color:#173E2B!important}
+.contact-page h1,.contact-page h2,.contact-page h3{color:#173E2B!important}
+.contact-page h1 em,.contact-page h2 em,.contact-page .contact-copy .eyebrow,.contact-page .contact-detail a,.contact-page .linkedin,.contact-page .form-top{color:#245B3B!important}
+.contact-page .contact-form{background:#FFFFFF!important;border-color:#DCE6D8!important}
+.contact-page .contact-form input,.contact-page .contact-form select,.contact-page .contact-form textarea{background:#FFFFFF!important;color:#173E2B!important;border-color:#DCE6D8!important}
+.contact-page .contact-form .submit-button{background:#245B3B!important;color:#FFFFFF!important}
+.contact-page .contact-detail>span{background:#DCE6D8!important;color:#245B3B!important}
+/* Keep cursor as a simple dot */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .sd-cursor{display:block!important;width:8px!important;height:8px!important;border-radius:50%!important;background:#245B3B!important;border:1px solid #FAF8F2!important;box-shadow:0 0 0 1px #245B3B!important}
+ .sd-cursor-ring{display:none!important}
+ body.cursor-hover .sd-cursor{background:#F4DDE1!important;box-shadow:0 0 0 1px #245B3B!important}
+}
