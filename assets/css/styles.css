@@ -1131,3 +1131,14 @@ a,button,.text-link,.service-card a,.services-detail-card a,.solution-copy a{--l
 .hero .text-link{border-bottom-color:#DCE6D8!important}
 .hero .eyebrow .dot,.hero .eyebrow::before,.hero .hero-kicker::before{background:#B8F34A!important}
 .hero .hero-art,.hero .art-glow,.hero .orbit,.hero .hero-visual,.hero .hero-visual::before,.hero .hero-visual::after{background-color:initial}
+
+
+/* Correct hero background: the particle canvas must remain transparent */
+.hero-particles,.hero-particle,.particle{background:transparent!important}
+canvas.hero-particles{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;pointer-events:none!important;z-index:0!important}
+.hero.section{position:relative!important;background:#FAF8F2!important;isolation:isolate}
+.hero.section>.hero-copy,.hero.section>.hero-art{position:relative;z-index:1}
+.hero.section .eyebrow,.hero.section .hero-kicker,.hero.section .hero-label{color:#245B3B!important}
+.hero.section .lead,.hero.section .hero-copy .lead{color:#245B3B!important}
+.hero.section h1 em,.hero.section h2 em{color:#087F5B!important}
+.hero.section .hero-particles{background:transparent!important}
