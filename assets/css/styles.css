@@ -1121,3 +1121,13 @@ a,button,.text-link,.service-card a,.services-detail-card a,.solution-copy a{--l
 @media(prefers-reduced-motion:no-preference){
  .hero-orbit,.hero-glow{box-shadow:none!important}
 }
+
+
+/* Precise correction: change purple HERO TEXT only; preserve the original hero design */
+.hero,.hero.section{background:#FAF8F2!important}
+.hero .eyebrow,.hero .hero-kicker,.hero .hero-label{color:#245B3B!important}
+.hero .lead,.hero .hero-copy .lead{color:#245B3B!important}
+.hero h1 em,.hero h2 em,.hero-copy h1 em,.hero-copy h2 em{color:#087F5B!important}
+.hero .text-link{border-bottom-color:#DCE6D8!important}
+.hero .eyebrow .dot,.hero .eyebrow::before,.hero .hero-kicker::before{background:#B8F34A!important}
+.hero .hero-art,.hero .art-glow,.hero .orbit,.hero .hero-visual,.hero .hero-visual::before,.hero .hero-visual::after{background-color:initial}
