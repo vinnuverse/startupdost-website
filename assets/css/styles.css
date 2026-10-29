@@ -1100,3 +1100,24 @@ h1 em,h2 em,.hero h1 em,.hero h2 em,.section-heading h2 em{color:#087F5B!importa
  .solution-card .solution-art{height:240px!important;min-height:0!important}
  .solution-card .solution-copy{padding:22px!important}
 }
+
+
+/* Remove remaining purple/lavender accents from hero and global UI */
+:root{--purple:#245B3B;--violet:#245B3B;--accent:#245B3B;--lime:#F4DDE1}
+.hero .eyebrow,.hero .hero-kicker,.hero .hero-label,.hero .lead,.hero-copy .lead,.hero p,.hero .hero-copy p{color:#245B3B!important}
+.hero h1 em,.hero h2 em,.hero-copy h1 em,.hero-copy h2 em{color:#087F5B!important}
+.hero-orbit,.hero-glow,.hero-shape,.hero-visual::before,.hero-copy::before,.hero::before,.hero::after{
+  border-color:rgba(36,91,59,.09)!important;
+}
+.hero-orbit,.hero-glow,.hero-shape{background-color:transparent!important}
+.hero .eyebrow .dot,.hero .eyebrow::before,.hero .hero-kicker::before{background:#B8F34A!important}
+.hero .lead,.hero-copy .lead{color:#245B3B!important}
+.hero .text-link,.hero a:not(.button),.hero-copy a:not(.button){text-decoration-color:#DCE6D8!important}
+.hero .text-link::after,.hero a:not(.button)::after{border-color:#245B3B!important}
+.hero-particles,.hero-particle,.particle{background:#B8F34A!important}
+.hero .button.primary,.hero-copy .button.primary{background:#245B3B!important;color:#FFFFFF!important}
+.hero .button:not(.primary),.hero-copy .button:not(.primary){color:#173E2B!important;border-color:#DCE6D8!important}
+a,button,.text-link,.service-card a,.services-detail-card a,.solution-copy a{--link-accent:#245B3B}
+@media(prefers-reduced-motion:no-preference){
+ .hero-orbit,.hero-glow{box-shadow:none!important}
+}
