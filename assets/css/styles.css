@@ -1128,3 +1128,24 @@ canvas.hero-particles{position:absolute!important;inset:0!important;width:100%!i
 
 
 /* Jupiter/planet cursor styles removed. The current horned pointer + click-head cursor is retained. */
+
+
+/* Final cursor cleanup: absolutely no purple/lime rings, halos or pseudo-orbits. */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .sd-cursor, body.cursor-click .sd-cursor {
+    border:0!important;
+    outline:0!important;
+    box-shadow:none!important;
+    filter:none!important;
+  }
+  .sd-cursor::before,.sd-cursor::after,
+  body.cursor-click .sd-cursor::before,
+  body.cursor-click .sd-cursor::after {
+    content:none!important;
+    display:none!important;
+    border:0!important;
+    box-shadow:none!important;
+    animation:none!important;
+  }
+  .sd-cursor-ring { display:none!important; }
+}
