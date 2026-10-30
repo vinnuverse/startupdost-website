@@ -443,98 +443,6 @@ body{background:#faf8f1;color:#000000}
 }
 @media (pointer:coarse),(prefers-reduced-motion:reduce){.sd-cursor,.sd-cursor-ring{display:none!important}body,a,button,select,input,textarea{cursor:auto!important}}
 
-/* Jupiter cursor: approximately 0.5 cm across */
-@media (pointer:fine) and (prefers-reduced-motion:no-preference){
- .sd-cursor{width:19px!important;height:19px!important;border-radius:50%;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 28% 23%,#fff4df 0,#e9cba0 24%,#c99a6c 57%,#80583e 100%)!important;box-shadow:inset -3px -2px 5px #593c2c80,0 1px 7px #60442b55!important;transition:width .2s,height .2s,opacity .2s!important}
- .sd-cursor:before{content:""!important;position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(0deg,transparent 0 2px,#a66c4b 2px 3.5px,#f1d7b1 3.5px 5px,#c18a62 5px 6px,#ead0a7 6px 8px)!important;mix-blend-mode:multiply;animation:sdJupiterBands 9s linear infinite!important}
- .sd-cursor:after{content:""!important;position:absolute;inset:1px;border-radius:50%;background:radial-gradient(ellipse at 65% 61%,#a94732 0 9%,#c76d4b 10% 13%,transparent 14%),linear-gradient(115deg,#fff9,transparent 38% 72%,#38201266)!important;pointer-events:none}
- body.cursor-hover .sd-cursor{width:19px!important;height:19px!important;box-shadow:inset -3px -2px 5px #593c2c80,0 0 0 3px #d7a66a35,0 1px 8px #60442b66!important}
- .sd-cursor-ring{border-color:#c18a62!important;box-shadow:0 0 0 4px #c18a6215!important}
- .sd-cursor-ring:before{border-color:#c18a6270!important}
- body.cursor-hover .sd-cursor-ring{border-color:#a66c4b!important;background:#d7a66a20!important}
- @keyframes sdJupiterBands{0%{background-position:0 0}100%{background-position:0 24px}}
-}
-
-/* Double the Jupiter cursor size: 38px (~1 cm at 96dpi) */
-@media (pointer:fine) and (prefers-reduced-motion:no-preference){
- .sd-cursor{width:38px!important;height:38px!important}
- body.cursor-hover .sd-cursor{width:38px!important;height:38px!important}
-}
-
-/* Make Jupiter's planetary rings unmistakable */
-@media (pointer:fine) and (prefers-reduced-motion:no-preference){
- .sd-cursor{overflow:visible!important}
- .sd-cursor:before{clip-path:circle(50%)}
- .sd-cursor-ring{width:62px!important;height:62px!important;border:2px solid #c18a62!important;border-radius:50%!important;transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)!important;box-shadow:0 0 0 2px #e6c99a55!important;background:transparent!important}
- .sd-cursor-ring:before{inset:-5px!important;border:1px dashed #a66c4b!important;border-radius:50%!important;transform:scaleY(1.4);animation:sdOrbitSpin 7s linear infinite!important}
- body.cursor-hover .sd-cursor-ring{width:72px!important;height:72px!important;border-color:#a66c4b!important;background:transparent!important}
-}
-
-/* Rotate Jupiter itself, not only its orbital rings */
-@media (pointer:fine) and (prefers-reduced-motion:no-preference){
- .sd-cursor:before{transform-origin:center;animation:sdJupiterRotate 5s linear infinite,sdJupiterBands 9s linear infinite!important}
- @keyframes sdJupiterRotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-}
-
-
-/* Orbital rings rotate around Jupiter, not like clock hands */
-@media (pointer:fine) and (prefers-reduced-motion:no-preference){
- .sd-cursor-ring{
-   transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)!important;
-   animation:sdRingOrbit 6s linear infinite!important;
-   border-width:2px!important;
- }
- .sd-cursor-ring:before{
-   transform-origin:center!important;
-   animation:sdDashedOrbit 9s linear infinite!important;
- }
- @keyframes sdRingOrbit{
-   0%{transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)}
-   50%{transform:translate(-50%,-50%) rotate(62deg) scaleY(.34)}
-   100%{transform:translate(-50%,-50%) rotate(152deg) scaleY(.34)}
- }
- @keyframes sdDashedOrbit{
-   0%{transform:scaleY(1.4) rotate(0deg)}
-   100%{transform:scaleY(1.4) rotate(360deg)}
- }
-}
-
-
-/* Keep Jupiter still; both rings orbit clockwise */
-@media (pointer:fine) and (prefers-reduced-motion:no-preference){
- .sd-cursor:before{animation:none!important;transform:none!important}
- .sd-cursor-ring{
-   transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)!important;
-   animation:sdRingOrbitClockwise 7s linear infinite!important;
- }
- .sd-cursor-ring:before{
-   transform-origin:center!important;
-   animation:sdDashedOrbitClockwise 5s linear infinite!important;
- }
- .sd-cursor-ring:after{
-   content:"";
-   position:absolute;
-   inset:-7px -3px;
-   border:1.5px solid rgba(183,143,99,.9);
-   border-radius:50%;
-   transform:scaleY(1.4);
-   pointer-events:none;
-   animation:sdSecondRingClockwise 8s linear infinite!important;
- }
- @keyframes sdRingOrbitClockwise{
-   from{transform:translate(-50%,-50%) rotate(-28deg) scaleY(.34)}
-   to{transform:translate(-50%,-50%) rotate(332deg) scaleY(.34)}
- }
- @keyframes sdDashedOrbitClockwise{
-   from{transform:scaleY(1.4) rotate(0deg)}
-   to{transform:scaleY(1.4) rotate(360deg)}
- }
- @keyframes sdSecondRingClockwise{
-   from{transform:scaleY(1.4) rotate(0deg)}
-   to{transform:scaleY(1.4) rotate(360deg)}
- }
-}
-
 /* Conversion-focused benefits strip inspired by modern performance-agency layouts */
 .growth-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:27px 9%;background:#fffdf8;border-bottom:1px solid var(--line)}
 .growth-points article{display:flex;align-items:flex-start;gap:14px;padding:10px 24px;border-right:1px solid var(--line)}
@@ -809,33 +717,6 @@ body,.hero,.hero-copy,.hero-art,.section,.services-hero,.services-overview,.abou
 
 /* FINAL SAGE-GREEN REMOVAL: brand palette enforced */
 :root{--ink:#000000;--violet:#7E3BED;--paper:#FFFFFF;--lime:#C6FF34;--green:#C6FF34}
-
-/* STARTUPDOST PLANET CURSOR — visible, smooth and aligned to the violet/lime palette */
-@media (pointer:fine) and (prefers-reduced-motion:no-preference){
- body,a,button,select,input,textarea{cursor:none!important}
- .sd-cursor{
-  width:24px!important;height:24px!important;border-radius:50%!important;
-  background:radial-gradient(circle at 30% 24%,#fff 0 5%,transparent 18%),repeating-linear-gradient(165deg,#C6FF34 0 3px,#7E3BED 3px 6px,#C6FF34 6px 8px,#000 8px 10px)!important;
-  border:1.5px solid #000!important;box-shadow:0 0 0 2px #C6FF34,0 2px 9px #0005!important;
-  mix-blend-mode:normal!important;z-index:10001!important;
- }
- .sd-cursor-ring{
-  width:48px!important;height:48px!important;border:1px solid #7E3BED!important;
-  box-shadow:0 0 0 2px #C6FF3426!important;background:transparent!important;
-  z-index:10000!important;
- }
- .sd-cursor-ring:before,.sd-cursor-ring:after{
-  content:"";position:absolute;left:50%;top:50%;width:56px;height:23px;
-  border:1.5px solid #C6FF34;border-radius:50%;transform:translate(-50%,-50%) rotate(-28deg);
- }
- .sd-cursor-ring:after{width:62px;height:29px;border-color:#7E3BED;transform:translate(-50%,-50%) rotate(34deg)}
- body.cursor-hover .sd-cursor{width:28px!important;height:28px!important}
- body.cursor-hover .sd-cursor-ring{width:58px!important;height:58px!important;background:transparent!important;border-color:#C6FF34!important}
-}
-@media(max-width:650px),(prefers-reduced-motion:reduce){
- body,a,button,select,input,textarea{cursor:auto!important}
- .sd-cursor,.sd-cursor-ring{display:none!important}
-}
 
 /* STARTUPDOST FINAL LIGHT THEME — white canvas, black type, violet + lime accents */
 :root{color-scheme:light;--ink:#000000;--violet:#7E3BED;--paper:#FFFFFF;--lime:#C6FF34;--green:#C6FF34}
@@ -1254,3 +1135,6 @@ canvas.hero-particles{position:absolute!important;inset:0!important;width:100%!i
   html, body, body * { cursor:auto !important; }
   .sd-cursor, .sd-cursor-ring { display:none !important; }
 }
+
+
+/* Jupiter/planet cursor styles removed. The current horned pointer + click-head cursor is retained. */
