@@ -34,36 +34,26 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
   revealTargets.forEach(element => revealObserver.observe(element));
 }
 
-// Custom cursor on mouse/trackpad devices only. Native touch and reduced-motion stay untouched.
+// Custom StartupDost cursor: horned pointer while exploring; head + ring on click.
 if (window.matchMedia("(pointer:fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const cursor = document.createElement("span");
-  const ring = document.createElement("span");
   cursor.className = "sd-cursor";
-  ring.className = "sd-cursor-ring";
   cursor.setAttribute("aria-hidden", "true");
-  ring.setAttribute("aria-hidden", "true");
-  document.body.append(cursor, ring);
-  let pointerX = -100, pointerY = -100, ringX = -100, ringY = -100;
+  document.body.append(cursor);
+  let clickTimer;
   document.addEventListener("mousemove", event => {
-    pointerX = event.clientX;
-    pointerY = event.clientY;
-    cursor.style.left = pointerX + "px";
-    cursor.style.top = pointerY + "px";
+    cursor.style.left = event.clientX + "px";
+    cursor.style.top = event.clientY + "px";
     document.body.classList.add("cursor-ready");
   }, { passive: true });
-  const animateRing = () => {
-    ringX += (pointerX - ringX) * 0.19;
-    ringY += (pointerY - ringY) * 0.19;
-    ring.style.left = ringX + "px";
-    ring.style.top = ringY + "px";
-    requestAnimationFrame(animateRing);
-  };
-  requestAnimationFrame(animateRing);
-  document.addEventListener("mouseover", event => {
-    if (event.target.closest("a, button, .work-card, select, input, textarea")) document.body.classList.add("cursor-hover");
+  document.addEventListener("mousedown", () => {
+    document.body.classList.add("cursor-click");
+    clearTimeout(clickTimer);
+    clickTimer = setTimeout(() => document.body.classList.remove("cursor-click"), 520);
   });
-  document.addEventListener("mouseout", event => {
-    if (event.target.closest("a, button, .work-card, select, input, textarea")) document.body.classList.remove("cursor-hover");
+  document.addEventListener("mouseup", () => {
+    clearTimeout(clickTimer);
+    clickTimer = setTimeout(() => document.body.classList.remove("cursor-click"), 220);
   });
   document.addEventListener("mouseleave", () => document.body.classList.remove("cursor-ready"));
   document.addEventListener("mouseenter", () => document.body.classList.add("cursor-ready"));
