@@ -1149,3 +1149,14 @@ canvas.hero-particles{position:absolute!important;inset:0!important;width:100%!i
   }
   .sd-cursor-ring { display:none!important; }
 }
+
+/* Accessible keyboard focus: preserve the visual design while making navigation visible. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid #7562d5;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus:not(:focus-visible) {
+  outline: none;
+}
