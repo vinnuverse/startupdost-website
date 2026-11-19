@@ -1,44 +1,48 @@
 # StartupDost website
 
-A responsive static website for StartupDost with five service areas, illustrative portfolio concepts, and a project inquiry form.
+A responsive static website for StartupDost, built with HTML, CSS and vanilla JavaScript. The homepage presents six core service offerings, illustrative portfolio concepts, and a project enquiry form.
 
-## Pages and files
+## Project structure
 
-- `index.html` — landing page, website design & deployment, branding & events, logo & UI/UX, digital marketing, e-commerce growth, work concepts, about, and contact form.
-- `assets/css/styles.css` — responsive styling.
-- `assets/js/main.js` — mobile navigation and form behavior.
-- `google-apps-script/Code.gs` — optional Google Sheets endpoint for inquiries.
+- `index.html` — homepage, six service cards, capability tabs, process overview, contact form and seven FAQs.
+- `about.html` — company overview.
+- `services.html` — service details.
+- `work.html` — illustrative portfolio concepts.
+- `contact.html` — contact information and project enquiry form.
+- `assets/css/styles.css` — shared layout, components and responsive styles.
+- `assets/css/contact.css` — contact-page styles.
+- `assets/css/work.css` — portfolio-page styles.
+- `assets/js/main.js` — mobile navigation, capability tabs, visual effects and contact-form submission.
+- `google-apps-script/Code.gs` — optional Google Sheets endpoint code; it is not connected to the current website form by default.
+
+## Contact form
+
+The homepage and contact page use the same form pattern. The current JavaScript submits enquiries through the FormSubmit AJAX endpoint configured at the top of `assets/js/main.js`:
+
+`https://formsubmit.co/ajax/hello@startupdost.online`
+
+The form's HTML action also points to the corresponding FormSubmit recipient. The active frontend does **not** currently post enquiries to Google Apps Script or save them to Google Sheets.
+
+`google-apps-script/Code.gs` is a separate, optional handler. If you choose to use it, connect it to the frontend deliberately, review the Apps Script access settings, and test that submissions are actually written to the intended spreadsheet before describing Sheets storage as active.
 
 ## Deploy on Vercel
 
-1. Import this GitHub repository into Vercel.
-2. Keep the framework preset as **Other** and the build command empty.
-3. Set the output directory to the repository root (or leave the default if detected).
-4. Deploy.
+This repository is a static site and does not require a framework build step.
 
-## Connect the inquiry form to Google Sheets
+1. Import the GitHub repository into Vercel.
+2. Set the framework preset to **Other**.
+3. Keep the build command empty.
+4. Use the repository root as the output directory (or leave the default if Vercel detects it correctly).
+5. Deploy the project.
 
-The form does **not** claim to save submissions until you configure the endpoint.
+The current FormSubmit configuration is in the client-side JavaScript; no Google Sheets endpoint is configured through an environment variable.
 
-1. Open the spreadsheet: https://docs.google.com/spreadsheets/d/1IpcvG_D2pErfRErA5VLZC0mGBINznpgIQmzpf8VUx6Q/edit
-2. Open https://script.google.com/ and create a new Apps Script project.
-3. Replace its starter code with `google-apps-script/Code.gs`.
-4. Save, then choose **Deploy → New deployment → Web app**.
-5. Set **Execute as** to you and access to **Anyone** (review the access implications before enabling public access). Deploy and authorize it.
-6. Copy the Web app URL ending in `/exec`.
-7. Paste that URL into `GOOGLE_SHEETS_ENDPOINT` at the top of `assets/js/main.js`, commit the change, and redeploy.
-8. Send a test inquiry and confirm a new row appears in the **StartupDost Inquiries** sheet tab.
+## Validation
 
-The Apps Script creates the tab and headers automatically. Its endpoint uses a browser-compatible form POST; because `no-cors` responses cannot be inspected by the browser, test the sheet itself to confirm that the row was saved.
+There is no package manifest or automated test command in this repository. Before publishing a change, check the affected page in a browser, test the mobile navigation and responsive layout, and submit a test enquiry when the form flow is changed. Confirm receipt through the configured FormSubmit destination.
 
-## Email notifications
+## Content notes
 
-This project does not promise automatic email notifications. To send notification emails, add a trusted server-side email integration (for example, a provider API behind a serverless function) and keep API secrets out of client-side JavaScript.
-
-## Notes
-
-- Portfolio tiles are locally drawn CSS concepts, not external image links, to avoid broken image assets.
-- The budget option **₹5,000–₹20,000 (Newbie)** is included.
-- No WhatsApp button or quote estimator is included.
-- Contact: hello@startupdost.online
+- Portfolio tiles are locally drawn CSS concepts, not verified client case studies. Keep the portfolio disclaimer visible unless real project details are added.
+- The website contact address is `hello@startupdost.online`.
 - LinkedIn: https://in.linkedin.com/company/startupdost2018
