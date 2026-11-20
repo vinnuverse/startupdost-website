@@ -15,6 +15,14 @@ nav?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => 
   nav.classList.remove("open");
   menuToggle?.setAttribute("aria-expanded", "false");
 }));
+// Allow keyboard users to dismiss the open mobile menu with Escape.
+document.addEventListener("keydown", event => {
+  if (event.key !== "Escape" || !nav?.classList.contains("open")) return;
+  nav.classList.remove("open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  menuToggle?.focus();
+});
+
 
 // Progressive reveal: content remains visible if IntersectionObserver is unavailable.
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
